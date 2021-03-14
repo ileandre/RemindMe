@@ -79,3 +79,15 @@ Estimate out how much time you'll need for each part of your project! This will 
 
 # SWOT Analysis: 
 Heading into project week and with all your planning in mind, consider your Strengths, Weaknesses, Opportunities, and Threats as they relate to your final project. How will you overcome your weaknesses and threats?
+
+**Strength**
+I have solid understanding of all the concepts we've learned and believe I can properly implement them into my project.
+
+**Weaknesses**
+I tend to overthink and have high expecations for my work which often gives me stress because I think beyond (what I believe to be) my coding abilities. This often causes me stress.
+
+**Opportunities**
+This is an opportunty to show how much I actally learned and will encourage me to learn more, as I search for solutions to problems I may not know from the top of my head. This is also an opportunity to build my pre-exsising code bank for future projects and jobs.
+
+**Threats**
+I overthink situations and tend to code ineffecient code, until I realize there's an easier way. This results in a lot of unneeded lost time.
