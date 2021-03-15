@@ -21,7 +21,7 @@ This is a monthly calendar app where users input the month and number of days in
 
 # Component Hierarchy: 
 
-![RemindMe__ComponentStructure](https://user-images.githubusercontent.com/65198477/111187161-2359c980-858a-11eb-8ad2-80690375ec2b.png)
+![RemindMe__ComponentStructure](https://user-images.githubusercontent.com/65198477/111192482-7aae6880-858f-11eb-8558-e60c820d0e67.png)
 
 
 # API: 
