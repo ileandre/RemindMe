@@ -3,11 +3,10 @@
 # Title: RemindMe
 
 # Description: 
-4 to 5 sentences in non-technical speak summarizing the features, functions, and goals.
 This is a monthly calendar app where users input the month and number of days in the current month (similar to a whiteboard calendar). In here, users can create and edit and delete events, as well as write general notes.
 
 # Wireframes: 
-Mockups of your app on desktop, tablet, and mobile.
+
 **DESKTOP**
 
 ![CalendarLayout_Desktop](https://user-images.githubusercontent.com/65198477/111083987-cc4ee880-84e6-11eb-8f0a-292abca14f39.png)
@@ -25,15 +24,12 @@ Mockups of your app on desktop, tablet, and mobile.
 
 
 # Component Hierarchy: 
-A visual tree of your components, depicting the parent/child relationships, as well as an indication of which will be class components, requiring state, and which will be functional components, taking props.
-API: How you will be using Airtable to handle your data, as well as a sample data pull from your Airtable database.
 
 ![RemindMe__ComponentStructure](https://user-images.githubusercontent.com/65198477/111088551-198a8480-84fe-11eb-83ca-3975d43d792d.png)
 
 
 # API: 
-How you will be using Airtable to handle your data, as well as a sample data pull from your Airtable database.
-I will use Airtable to store the user created events and will have columns for the title, time  description of the users event.
+
 ```
 {
     "records": [
@@ -71,7 +67,6 @@ I will use Airtable to store the user created events and will have columns for t
 
 
 # MVP: 
-Your goals for MVP, including the minimum, need-to-have features of your app.
 
 1) Homepage with dropdown menu for the month, start day and number of days in the specified month
 2) Get and post, put and delete events from Airtable
@@ -79,13 +74,12 @@ Your goals for MVP, including the minimum, need-to-have features of your app.
 
 
 # Post-MVP: 
-Write out what your goals are for post-MVP, including nice-to-have features that you would like to implement once your MVP is complete. (If you plan to use a component library, please link that here as well.)
 
 1) Use 2nd API to automatically generate basic calendar information
 2) Color change mode
 
 # Project Schedule: 
-Lay out your timeline for your project, from proposal to deployment.
+
 |  Day | Deliverable | Status
 |---|---| ---|
 |Mar 13-14 | Prompt / Wireframes / Priority Matrix / Timeframes | Complete
@@ -97,7 +91,7 @@ Lay out your timeline for your project, from proposal to deployment.
 
 
 # Timeframes: 
-Estimate out how much time you'll need for each part of your project! This will help you determine your schedule as well as how to prioritize certain features.
+
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
 | Psuedo code | L | 2hrs |  |  |
@@ -115,7 +109,6 @@ Estimate out how much time you'll need for each part of your project! This will 
 
 
 # SWOT Analysis: 
-Heading into project week and with all your planning in mind, consider your Strengths, Weaknesses, Opportunities, and Threats as they relate to your final project. How will you overcome your weaknesses and threats?
 
 **Strength**
 I have solid understanding of all the concepts we've learned and believe I can properly implement them into my project.
