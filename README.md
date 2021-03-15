@@ -1,7 +1,7 @@
 # RemindMe
 
 # Description: 
-This is a monthly calendar app where users input the month and number of days in the current month (similar to a whiteboard calendar). In here, users can create and edit and delete events, as well as write general notes.
+This is a monthly calendar app where users input the month, number of days in the current month (similar to a whiteboard calendar), the month start day and the year. In the app, users can create, edit and delete events, as well as write general notes.
 
 # Wireframes: 
 
@@ -76,7 +76,7 @@ This is a monthly calendar app where users input the month and number of days in
 
 # MVP: 
 
-1) Homepage with dropdown menu for the month, start day and number of days in the specified month
+1) Homepage with dropdown menu for the month, start day, number of days in the specified month, and year
 2) Get and post, put and delete events from Airtable
 3) Create components to display events and notes on the page
 4) Create components accept a users input for events and notes
@@ -88,6 +88,7 @@ This is a monthly calendar app where users input the month and number of days in
 
 1) Use 2nd API to automatically generate basic calendar information
 2) Color change mode
+
 
 # Project Schedule: 
 
@@ -122,13 +123,13 @@ This is a monthly calendar app where users input the month and number of days in
 # SWOT Analysis: 
 
 **Strength**
-I have solid understanding of all the concepts we've learned and believe I can properly implement them into my project.
+I have a solid understanding of all the concepts we've learned and believe I can properly implement them into my project.
 
 **Weaknesses**
-I tend to overthink and have high expecations for my work which often gives me stress because I think beyond (what I believe to be) my coding abilities. This often causes me stress.
+I tend to overthink and have high expecations for my work, which often gives me stress because I think beyond (what I believe to be) my coding abilities.
 
 **Opportunities**
-This is an opportunty to show how much I actally learned and will encourage me to learn more, as I search for solutions to problems I may not know from the top of my head. This is also an opportunity to build my pre-exsising code bank for future projects and jobs.
+This is an opportunty to show how much I actally learned and encourages me to learn more, as I search for solutions to problems I may not already know. This is also an opportunity to build my pre-exsising code bank for future projects and jobs.
 
 **Threats**
-I overthink situations and tend to code ineffecient code, until I realize there's an easier way. This results in a lot of unneeded lost time.
+I overthink situations and tend to over-code, but eventually realize there's an easier way. This results in a lot of lost time.
