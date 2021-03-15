@@ -1,7 +1,5 @@
 # RemindMe
 
-# Title: RemindMe
-
 # Description: 
 This is a monthly calendar app where users input the month and number of days in the current month (similar to a whiteboard calendar). In here, users can create and edit and delete events, as well as write general notes.
 
@@ -9,21 +7,21 @@ This is a monthly calendar app where users input the month and number of days in
 
 **DESKTOP**
 
-![CalendarIntro_Desktop](https://user-images.githubusercontent.com/65198477/111172717-6f9e0d00-857c-11eb-8ae1-1624f8b6ed82.png)
-![CalendarLayout_Desktop](https://user-images.githubusercontent.com/65198477/111089211-396f7780-8501-11eb-83e9-e41209b0f235.png)
-![EventLayout_Desktop](https://user-images.githubusercontent.com/65198477/111089214-3d02fe80-8501-11eb-86b5-325b817caabf.png)
+![CalendarIntro_Desktop](https://user-images.githubusercontent.com/65198477/111191107-1a6af700-858e-11eb-9174-eddd427ca6a5.png)
+![CalendarLayout_Desktop](https://user-images.githubusercontent.com/65198477/111191122-1dfe7e00-858e-11eb-8bfc-fd304b86298b.png)
+![EventLayout_Desktop](https://user-images.githubusercontent.com/65198477/111191132-20f96e80-858e-11eb-9fea-d3c79b6ea9c3.png)
 
 
 **TABLET and MOBILE**
 
-![CalendarIntro_Tablet_Mobile](https://user-images.githubusercontent.com/65198477/111173110-c60b4b80-857c-11eb-83a9-8e8632fe21af.png)
-![CalendarLayout_Tablet_Mobile](https://user-images.githubusercontent.com/65198477/111089217-42604900-8501-11eb-8eea-09d65143e3ef.png)
-![EventLayout_Tablet_Mobile](https://user-images.githubusercontent.com/65198477/111089220-455b3980-8501-11eb-8bc8-9ed205f14447.png)
+![CalendarIntro_Tablet_Mobile](https://user-images.githubusercontent.com/65198477/111191172-2ce53080-858e-11eb-990a-d1dff130e7c8.png)
+![CalendarLayout_Tablet_Mobile](https://user-images.githubusercontent.com/65198477/111191191-3078b780-858e-11eb-9927-3933e5fa60b6.png)
+![EventLayout_Tablet_Mobile](https://user-images.githubusercontent.com/65198477/111191199-3373a800-858e-11eb-9bd9-4fd681234b1d.png)
 
 
 # Component Hierarchy: 
 
-![RemindMe__ComponentStructure](https://user-images.githubusercontent.com/65198477/111088551-198a8480-84fe-11eb-83ca-3975d43d792d.png)
+![RemindMe__ComponentStructure](https://user-images.githubusercontent.com/65198477/111187161-2359c980-858a-11eb-8ad2-80690375ec2b.png)
 
 
 # API: 
