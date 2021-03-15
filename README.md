@@ -30,7 +30,46 @@ Mockups of your app on desktop, tablet, and mobile.
 A visual tree of your components, depicting the parent/child relationships, as well as an indication of which will be class components, requiring state, and which will be functional components, taking props.
 API: How you will be using Airtable to handle your data, as well as a sample data pull from your Airtable database.
 
-![RemindMe__ComponentStructure](https://user-images.githubusercontent.com/65198477/111087613-f4474780-84f8-11eb-9f1c-f24fb3611d78.png)
+![RemindMe__ComponentStructure](https://user-images.githubusercontent.com/65198477/111088551-198a8480-84fe-11eb-83ca-3975d43d792d.png)
+
+
+# API: 
+How you will be using Airtable to handle your data, as well as a sample data pull from your Airtable database.
+I will use Airtable to store the user created events and will have columns for the title, time  description of the users event.
+```
+{
+    "records": [
+        {
+            "id": "rectcymMKNQjbsN23",
+            "fields": {
+                "title": "Irma's Birthday",
+                "time": "10:30 am",
+                "description": "It's time to go wild!"
+            },
+            "createdTime": "2021-03-14T23:35:38.000Z"
+        },
+        {
+            "id": "reccYAw6Dd5DgMO5Z",
+            "fields": {
+                "title": "Doctors Appointment",
+                "time": "12:00 pm",
+                "description": "Don't forget the insurance card"
+            },
+            "createdTime": "2021-03-14T23:35:38.000Z"
+        },
+        {
+            "id": "rectmADYiqLbstNBB",
+            "fields": {
+                "title": "Family Dinner",
+                "time": "7:30 pm",
+                "description": "Bring cash."
+            },
+            "createdTime": "2021-03-14T23:35:38.000Z"
+        }
+    ],
+    "offset": "rectmADYiqLbstNBB"
+}
+```
 
 
 # MVP: 
