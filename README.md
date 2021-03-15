@@ -77,17 +77,18 @@ This is a monthly calendar app where users input the month, number of days in th
 # MVP: 
 
 1) Homepage with dropdown menu for the month, start day, number of days in the specified month, and year
-2) Get and post, put and delete events from Airtable
+2) Get and post from Airtable
 3) Create components to display events and notes on the page
-4) Create components accept a users input for events and notes
-5) Create component to render individual divs to the calendar
-6) Home and Calendar buttons that link the home and calendar pages
+4) Create components(forms) that accept a users input for events and notes
+5) Create component to render individual divs(days) to the calendar
+6) Home and Calendar buttons that navigate to the home and calendar pages
 
 
 # Post-MVP: 
 
 1) Use 2nd API to automatically generate basic calendar information
 2) Color change mode
+3) Put and delete from Airtable
 
 
 # Project Schedule: 
