@@ -8,7 +8,7 @@ This is a monthly calendar app where users input the month and number of days in
 **DESKTOP**
 
 ![CalendarIntro_Desktop](https://user-images.githubusercontent.com/65198477/111191107-1a6af700-858e-11eb-9174-eddd427ca6a5.png)
-![CalendarLayout_Desktop](https://user-images.githubusercontent.com/65198477/111191122-1dfe7e00-858e-11eb-8bfc-fd304b86298b.png)
+![CalendarLayout_Desktop](https://user-images.githubusercontent.com/65198477/111191478-7df52480-858e-11eb-960f-878d9663af0b.png)
 ![EventLayout_Desktop](https://user-images.githubusercontent.com/65198477/111191132-20f96e80-858e-11eb-9fea-d3c79b6ea9c3.png)
 
 
