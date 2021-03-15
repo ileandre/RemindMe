@@ -66,7 +66,10 @@ This is a monthly calendar app where users input the month and number of days in
 
 1) Homepage with dropdown menu for the month, start day and number of days in the specified month
 2) Get and post, put and delete events from Airtable
-4) Post and delete from Airtable
+3) Create components to display events and notes on the page
+4) Create components accept a users input for events and notes
+5) Create component to render individual divs to the calendar
+6) Home and Calendar buttons that link the home and calendar pages
 
 
 # Post-MVP: 
@@ -91,17 +94,17 @@ This is a monthly calendar app where users input the month and number of days in
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
 | Psuedo code | L | 2hrs |  |  |
-| Setup Airtable | H | 0.5hr|  |  |
-| API Functionality | H | 2hrs|  |  |
-| Create Homepage component with Link | H | 1.5hrs|  |  |
-| Create Calendar component with Link and Renders | H | 4hrs|  |  |
-| Create Notes component with buttons and access API | H | 3hrs|  |  |
-| Create Day Agenda component with renders and API access | H | 3hrs |  |  |
-| Create Event component with buttons and access API | H | 2hrs |  |  |
-| Create Form component with button and access API | H | 1.5hrs |  |  |
-| CSS General Styling | H | 8hrs |  |  |
-| CSS Media queries | H | 2hrs |  |  |
-| Total | H | 29.5hrs |  |  |
+| Setup Airtable | H | 2hrs|  |  |
+| API Functionality | H | 3hrs|  |  |
+| Create Homepage component with Link | H | 2hrs|  |  |
+| Create Calendar component with Link and Renders | H | 5hrs|  |  |
+| Create Notes component with buttons and access API | H | 4hrs|  |  |
+| Create Day Agenda component with renders and API access | H | 4hrs |  |  |
+| Create Event component with buttons and access API | H | 3hrs |  |  |
+| Create Form component with button and access API | H | 3hrs |  |  |
+| CSS General Styling | H | 10hrs |  |  |
+| CSS Media queries | H | 3hrs |  |  |
+| Total | H | 41hrs |  |  |
 
 
 # SWOT Analysis: 
