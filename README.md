@@ -9,12 +9,14 @@ This is a monthly calendar app where users input the month and number of days in
 
 **DESKTOP**
 
+![CalendarIntro_Desktop](https://user-images.githubusercontent.com/65198477/111172717-6f9e0d00-857c-11eb-8ae1-1624f8b6ed82.png)
 ![CalendarLayout_Desktop](https://user-images.githubusercontent.com/65198477/111089211-396f7780-8501-11eb-83e9-e41209b0f235.png)
 ![EventLayout_Desktop](https://user-images.githubusercontent.com/65198477/111089214-3d02fe80-8501-11eb-86b5-325b817caabf.png)
 
 
 **TABLET and MOBILE**
 
+![CalendarIntro_Tablet_Mobile](https://user-images.githubusercontent.com/65198477/111173110-c60b4b80-857c-11eb-83a9-8e8632fe21af.png)
 ![CalendarLayout_Tablet_Mobile](https://user-images.githubusercontent.com/65198477/111089217-42604900-8501-11eb-8eea-09d65143e3ef.png)
 ![EventLayout_Tablet_Mobile](https://user-images.githubusercontent.com/65198477/111089220-455b3980-8501-11eb-8bc8-9ed205f14447.png)
 
