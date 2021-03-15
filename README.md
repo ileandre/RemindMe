@@ -26,18 +26,19 @@ This is a monthly calendar app where users input the month, number of days in th
 
 # API: 
 
+EVENTS
 ```
 {
+   {
     "records": [
         {
             "id": "rectcymMKNQjbsN23",
             "fields": {
+                "day": 10,
                 "time": "10:30 am",
                 "title": "Irma's Birthday",
-                "description": "It's time to go wild!",
-                "notes": "Something inspirational",
                 "month": "June",
-                "day": 10,
+                "description": "It's time to go wild!",
                 "year": 2021
             },
             "createdTime": "2021-03-14T23:35:38.000Z"
@@ -45,31 +46,61 @@ This is a monthly calendar app where users input the month, number of days in th
         {
             "id": "reccYAw6Dd5DgMO5Z",
             "fields": {
+                "day": 25,
                 "time": "12:00 pm",
                 "title": "Doctors Appointment",
-                "description": "Don't forget the insurance card",
                 "month": "June",
-                "day": 25,
-                "year": 2021,
-                "notes": "Inpire"
+                "description": "Don't forget the insurance card",
+                "year": 2021
             },
             "createdTime": "2021-03-14T23:35:38.000Z"
         },
         {
             "id": "rectmADYiqLbstNBB",
             "fields": {
+                "day": 12,
                 "time": "7:30 pm",
                 "title": "Family Dinner",
-                "description": "Bring cash.",
                 "month": "June",
-                "day": 12,
-                "year": 2021,
-                "notes": "Love"
+                "description": "Bring cash.",
+                "year": 2021
             },
             "createdTime": "2021-03-14T23:35:38.000Z"
         }
     ],
-    "offset": "rectmADYiqLbstNBB"
+    "o
+```
+
+NOTES
+```
+{
+    "records": [
+        {
+            "id": "recMPSywlGq4dvRTp",
+            "fields": {
+                "month": "June",
+                "notes": "Inspire"
+            },
+            "createdTime": "2021-03-15T19:27:08.000Z"
+        },
+        {
+            "id": "recASRScgD1dVtw01",
+            "fields": {
+                "month": "June",
+                "notes": "laugh"
+            },
+            "createdTime": "2021-03-15T19:27:08.000Z"
+        },
+        {
+            "id": "recFlQuJn0IGZawgU",
+            "fields": {
+                "month": "June",
+                "notes": "happiness"
+            },
+            "createdTime": "2021-03-15T19:27:08.000Z"
+        }
+    ],
+    "offset": "recFlQuJn0IGZawgU"
 }
 ```
 
