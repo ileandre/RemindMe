@@ -4,8 +4,21 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <Homepage />
-  
+      <Link to="/">
+        <Homepage />
+      </Link>
+
+      <Route path="/calendar">
+
+      </Route>
+
+      <Route path="/:day">
+        
+      </Route>
+
+      <Route path="/:day/:id">
+        
+      </Route>
     </div>
   );
 }
