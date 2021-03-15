@@ -9,18 +9,14 @@ This is a monthly calendar app where users input the month and number of days in
 
 **DESKTOP**
 
-![CalendarLayout_Desktop](https://user-images.githubusercontent.com/65198477/111083987-cc4ee880-84e6-11eb-8f0a-292abca14f39.png)
-![EventLayout_Desktop](https://user-images.githubusercontent.com/65198477/111084114-34053380-84e7-11eb-9051-360b0deeed04.png)
+![CalendarLayout_Desktop](https://user-images.githubusercontent.com/65198477/111089211-396f7780-8501-11eb-83e9-e41209b0f235.png)
+![EventLayout_Desktop](https://user-images.githubusercontent.com/65198477/111089214-3d02fe80-8501-11eb-86b5-325b817caabf.png)
 
-**TABLET**
 
-![CalendarLayout_Tablet_Mobile](https://user-images.githubusercontent.com/65198477/111084076-04eec200-84e7-11eb-9121-58a2993267c2.png)
-![EventLayout_Tablet_Mobile](https://user-images.githubusercontent.com/65198477/111084286-066cba00-84e8-11eb-80f7-3afa90807484.png)
+**TABLET and MOBILE**
 
-**MOBILE**
-
-![CalendarLayout_Tablet_Mobile](https://user-images.githubusercontent.com/65198477/111084069-015b3b00-84e7-11eb-9f8b-308574ef4289.png)
-![EventLayout_Tablet_Mobile](https://user-images.githubusercontent.com/65198477/111084306-0ff62200-84e8-11eb-97a4-45ea2409edf6.png)
+![CalendarLayout_Tablet_Mobile](https://user-images.githubusercontent.com/65198477/111089217-42604900-8501-11eb-8eea-09d65143e3ef.png)
+![EventLayout_Tablet_Mobile](https://user-images.githubusercontent.com/65198477/111089220-455b3980-8501-11eb-8bc8-9ed205f14447.png)
 
 
 # Component Hierarchy: 
