@@ -1,8 +1,6 @@
 # RemindMe
 
-# Title: 
-
-**RemindMe**
+# Title: RemindMe
 
 # Description: 
 4 to 5 sentences in non-technical speak summarizing the features, functions, and goals.
