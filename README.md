@@ -32,27 +32,39 @@ This is a monthly calendar app where users input the month and number of days in
         {
             "id": "rectcymMKNQjbsN23",
             "fields": {
-                "title": "Irma's Birthday",
                 "time": "10:30 am",
-                "description": "It's time to go wild!"
+                "title": "Irma's Birthday",
+                "description": "It's time to go wild!",
+                "notes": "Something inspirational",
+                "month": "June",
+                "day": 10,
+                "year": 2021
             },
             "createdTime": "2021-03-14T23:35:38.000Z"
         },
         {
             "id": "reccYAw6Dd5DgMO5Z",
             "fields": {
-                "title": "Doctors Appointment",
                 "time": "12:00 pm",
-                "description": "Don't forget the insurance card"
+                "title": "Doctors Appointment",
+                "description": "Don't forget the insurance card",
+                "month": "June",
+                "day": 25,
+                "year": 2021,
+                "notes": "Inpire"
             },
             "createdTime": "2021-03-14T23:35:38.000Z"
         },
         {
             "id": "rectmADYiqLbstNBB",
             "fields": {
-                "title": "Family Dinner",
                 "time": "7:30 pm",
-                "description": "Bring cash."
+                "title": "Family Dinner",
+                "description": "Bring cash.",
+                "month": "June",
+                "day": 12,
+                "year": 2021,
+                "notes": "Love"
             },
             "createdTime": "2021-03-14T23:35:38.000Z"
         }
