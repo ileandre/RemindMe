@@ -1,11 +1,11 @@
-import { eventsBaseURL, notesBaseURL, config } from "../services"
+import { notesBaseURL, config } from "../services"
 import axios from "axios"
 import { useEffect, useState } from "react"
 import Days from "../components/Days"
 
 function Calendar() {
   const [calendarInfo, setCalendarInfo] = useState()
-  const numberOfDays = calendarInfo[0].fields.numberOfDays
+  // const numberOfDays = calendarInfo[0].fields.numberOfDays
   const dateNumbers = []
 
   useEffect(() => {
@@ -16,7 +16,7 @@ function Calendar() {
     callAPI()
   }, [])
 
-  for (let num = 1; num <= numberOfDays; num++) (
+  for (let num = 1; num <= 30; num++) (
     dateNumbers.push(num)
   )
 
