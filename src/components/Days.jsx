@@ -1,6 +1,11 @@
-function Days() {
+function Days(props) {
+
   return(
-<h1>Days</h1>
+    <div>
+        <div>
+        <h3>{props.num}</h3>
+        </div>
+    </div>
   )
 }
 
