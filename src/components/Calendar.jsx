@@ -22,19 +22,17 @@ function Calendar(props) {
   // }
   // console.log([...Array(parseInt(numberOfDays))])
   
-  const days = []
+  const numberOfDaysArr = []
   for (let num = 1; num <= parseInt(numberOfDays); num++) {
-    days.push(<>
-      <Link to={`/events/${year}/${month}/${num}`}>
-        <Days num={num} />
-      </Link>
-      <Route path="/events/:year/:month:/day">
-        {/* <h1>{`year:${year} month: ${month} day: ${num}`}</h1> */}
-        <h1>hello</h1>
-      </Route>
+    numberOfDaysArr.push(<>
+        <Days num={num} month={month} year={year}/>
     </>)
+    console.log(year, month, num)
   }
   
+  // for (let num = 1; num <= parseInt(numberOfDays); num++) {
+  //   numberOfDaysArr.push(num)
+  // }
   
   return(
     <div className="calendarPage">
@@ -47,7 +45,13 @@ function Calendar(props) {
       <h1>Month Name and Year</h1>
       <div className="calendarBoard">
         <div className="calendar">
-          {days}
+          {/* {numberOfDaysArr.map((num) => {
+            <Days
+              num={num}
+              month={month}
+              year={year}/>
+          })} */}
+          {numberOfDaysArr}
         </div>
         <div className="notesList">
           <NotesList />

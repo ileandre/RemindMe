@@ -18,7 +18,7 @@ function App() {
   const [numberOfDays, setNumberOfDays] = useState("Number of days")
   const [startDay, setStartDay] = useState("Start day")
   const [year, setYear] = useState("Year")
-
+  
   useEffect(() => {
     const callAPI = async () => {
       const resp = await axios.get(notesBaseURL, config)
@@ -28,7 +28,11 @@ function App() {
     console.log(calendarInfo)
   }, [toggleFetch])
 
-
+  const numberOfDaysArr = []
+  for (let num = 1; num <= parseInt(numberOfDays); num++) {
+    numberOfDaysArr.push(num)
+  }
+  console.log(numberOfDaysArr)
 
   return (
     <div className="App">
@@ -61,14 +65,13 @@ function App() {
           <Days />
         </Route>
       ))} */}
-      
-      <Route exact path="/events">
-        <Events />
-      </Route>
 
-      <Route exact path="/:month/:id">
-        <NotesList />
-      </Route>
+      {numberOfDaysArr && numberOfDaysArr.map((num) => {
+        <Route path={`/events/${year}/${month}/${num}`}>
+          <Events calendarInfo={calendarInfo} />
+        </Route>
+        // console.log(year, month, num)
+      })}
 
     </div>
   );
