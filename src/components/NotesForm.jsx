@@ -16,7 +16,7 @@ const{month, numberOfDays, startDay, year} = props
       year,
     }
     await axios.post(notesBaseURL, { fields: newNote }, config)
-    props.setNotesToggleFetch((curr) => !curr)
+    props.setToggleFetch((curr) => !curr)
   }
 
   return (

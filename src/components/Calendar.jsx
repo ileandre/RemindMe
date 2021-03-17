@@ -44,14 +44,19 @@ function Calendar(props) {
         <div className="notesList">
           {props.calendarInfo.map((note) => {
             if (note.fields.note) {
-              return <NotesList key={note.id} note={note} calendarInfo={props.calendarInfo} setNotesToggleFetch={props.setNotesToggleFetch} />
+              return <NotesList
+                key={note.id}
+                note={note}
+                calendarInfo={props.calendarInfo}
+                setToggleFetch={props.setToggleFetch}
+              />
             }
             console.log(note)
           })}
           <NotesForm 
             month={month}
             year={year}
-            setNotesToggleFetch={props.setNotesToggleFetch}
+            setToggleFetch={props.setToggleFetch}
           />
         </div>
       </div>

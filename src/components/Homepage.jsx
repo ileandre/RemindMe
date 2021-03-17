@@ -37,7 +37,7 @@ function Homepage(props) {
     } else {
       <h2>"Please fill in ALL the fields."</h2>
     }
-    props.setNotesToggleFetch((curr) => !curr)
+    props.setToggleFetch((curr) => !curr)
     history.push("/calendar")
 
   }

@@ -10,7 +10,7 @@ function NotesList(props) {
     console.log(props.note.id)
     console.log(eraseNoteURL)
     await axios.delete(eraseNoteURL, config)
-    props.setNotesToggleFetch((curr) => !curr)
+    props.setToggleFetch((curr) => !curr)
     // history.push("/")
   }
 
