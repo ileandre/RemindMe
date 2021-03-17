@@ -28,7 +28,7 @@ function Homepage(props) {
     if (month !== "Month" && numberOfDays !== "Number of days" && startDay !== "Start day" && year !== "Year") {
       const newCalendarInfo = {
         month,
-        notes: "",
+        note: "",
         numberOfDays,
         startDay,
         year,

@@ -54,7 +54,9 @@ function Calendar(props) {
           {numberOfDaysArr}
         </div>
         <div className="notesList">
-          <NotesList />
+          <NotesList
+            month={month}
+            year={year}/>
         </div>
       </div>
     </div>
