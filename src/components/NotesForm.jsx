@@ -15,7 +15,8 @@ const{month, numberOfDays, startDay, year} = props
       startDay,
       year,
     }
-    await axios.post(notesBaseURL, {fields: newNote}, config)
+    await axios.post(notesBaseURL, { fields: newNote }, config)
+    props.setNotesToggleFetch((curr) => !curr)
   }
 
   return (
@@ -25,7 +26,7 @@ const{month, numberOfDays, startDay, year} = props
       <label>New Note: 
         <textarea type="textarea" value={note} onChange={(e) => setNote(e.target.value)}/>
         </label>
-        <button type="submit">Add Event</button>
+        <button type="submit">Add Note</button>
     </form>
     </div>
   )

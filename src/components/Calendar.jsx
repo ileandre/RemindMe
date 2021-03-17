@@ -59,10 +59,12 @@ function Calendar(props) {
             if (note.fields.note) {
               return <NotesList id={id} note={note}/>
             }
+            console.log(note)
           })}
           <NotesForm 
             month={month}
             year={year}
+            setNotesToggleFetch={props.setNotesToggleFetch}
           />
         </div>
       </div>
