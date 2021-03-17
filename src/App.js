@@ -13,7 +13,7 @@ import axios from "axios"
 
 function App() {
   const [calendarInfo, setCalendarInfo] = useState([])
-  const [toggleFetch, setToggleFetch] = useState(true)
+  const [notesToggleFetch, setNotesToggleFetch] = useState(true)
   const [month, setMonth] = useState("Month")
   const [numberOfDays, setNumberOfDays] = useState("Number of days")
   const [startDay, setStartDay] = useState("Start day")
@@ -26,7 +26,7 @@ function App() {
     }
     callAPI()
     console.log(calendarInfo)
-  }, [toggleFetch])
+  }, [notesToggleFetch])
 
   const numberOfDaysArr = []
   for (let num = 1; num <= parseInt(numberOfDays); num++) {
@@ -40,7 +40,7 @@ function App() {
       <Route exact path="/">
         <Homepage
           calendarInfo={calendarInfo}
-          setToggleFetch={setToggleFetch}
+          setNotesToggleFetch={setNotesToggleFetch}
           setMonth={setMonth}
           setNumberOfDays={setNumberOfDays}
           setStartDay={setStartDay}
@@ -54,6 +54,7 @@ function App() {
       <Route exact path="/calendar">
         <Calendar
           calendarInfo={calendarInfo}
+          setNotesToggleFetch={setNotesToggleFetch}
           month={month}
           numberOfDays={numberOfDays}
           startDay={startDay}

@@ -6,7 +6,6 @@ import {useState} from 'react'
 function Homepage(props) {
   const { setMonth, setNumberOfDays, setStartDay, setYear } = props
   const { month, numberOfDays, startDay, year } = props
-  
   const monthsArr = ["Januray", "Feburary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
   const numberOfDaysArr = [28, 29, 30, 31]
   const daysArr = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
@@ -38,7 +37,7 @@ function Homepage(props) {
     } else {
       <h2>"Please fill in ALL the fields."</h2>
     }
-    props.setToggleFetch((curr) => !curr)
+    props.notesToggleFetch((curr) => !curr)
     history.push("/calendar")
 
   }

@@ -3,6 +3,7 @@ import axios from "axios"
 import { useState } from "react"
 import Days from "../components/Days"
 import NotesList from "../components/NotesList"
+import NotesForm from "../components/NotesForm"
 import { Link, Route } from "react-router-dom"
 
 function Calendar(props) {
@@ -54,9 +55,15 @@ function Calendar(props) {
           {numberOfDaysArr}
         </div>
         <div className="notesList">
-          <NotesList
+          {props.calendarInfo.map((note, id) => {
+            if (note.fields.note) {
+              return <NotesList id={id} note={note}/>
+            }
+          })}
+          <NotesForm 
             month={month}
-            year={year}/>
+            year={year}
+          />
         </div>
       </div>
     </div>
