@@ -17,6 +17,9 @@ function EventsForm() {
     await axios.post(eventsBaseURL, {fields: newEvent}, config)
   }
 
+  console.log("You're in the EventsForm component")
+
+
   return (
     <div>
     <h1>Notes List</h1>

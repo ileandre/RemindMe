@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom"
 
 function Days(props) {
-  const { month, numberOfDays, startDay, year, num} = props
+  const { month, year, date} = props
 
   return(
-    <Link to={`/events/${year}/${month}/${num}`}>
+    <Link to={`/events/${year}/${month}/${date}`}>
       <div className="dates">
-        <h3 className="dateNumbers">{props.num}</h3>
+        <h3 className="dateNumbers">{date}</h3>
         <div className="dateSpaces">
         </div>
       </div>

@@ -1,38 +1,25 @@
-import { notesBaseURL, config } from "../services"
-import axios from "axios"
-import { useState } from "react"
 import Days from "../components/Days"
 import NotesList from "../components/NotesList"
 import NotesForm from "../components/NotesForm"
-import { Link, Route } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 function Calendar(props) {
-  const { month, numberOfDays, startDay, year } = props
+  const { month, numberOfDays, year } = props
 
-  const [calendarInfo, setCalendarInfo] = useState()
+  // const [calendarInfo, setCalendarInfo] = useState()
   // const numberOfDays = calendarInfo[0].fields.numberOfDays
-  const [dateNumbersArr, setDateNumbersArr] = useState([])
 
-
-  
-  //   if (props.calendarInfo && props.calendarInfo.length > 0) {
-  //     for (let num = 1; num <= numberOfDays; num++) (
-  //       setDateNumbersArr([...dateNumbersArr, num])
-  //     )
-  //     console.log(dateNumbersArr)
-  // }
-  // console.log([...Array(parseInt(numberOfDays))])
   
   const numberOfDaysArr = []
-  for (let num = 1; num <= parseInt(numberOfDays); num++) {
+  for (let date = 1; date <= parseInt(numberOfDays); date++) {
     numberOfDaysArr.push(<>
-        <Days num={num} month={month} year={year}/>
+        <Days date={date} month={month} year={year}/>
     </>)
-    console.log(year, month, num)
   }
-  
-  // for (let num = 1; num <= parseInt(numberOfDays); num++) {
-  //   numberOfDaysArr.push(num)
+
+  // const numberOfDaysArr = []
+  // for (let date = 1; date <= parseInt(numberOfDays); date++) {
+  //   numberOfDaysArr.push(date)
   // }
   
   return(
@@ -46,18 +33,18 @@ function Calendar(props) {
       <h1>Month Name and Year</h1>
       <div className="calendarBoard">
         <div className="calendar">
-          {/* {numberOfDaysArr.map((num) => {
-            <Days
-              num={num}
+          {/* {numberOfDaysArr && numberOfDaysArr.map((date) => {
+            return (<Days
+              date={date}
               month={month}
-              year={year}/>
+              year={year}/>)
           })} */}
           {numberOfDaysArr}
         </div>
         <div className="notesList">
-          {props.calendarInfo.map((note, id) => {
+          {props.calendarInfo.map((note) => {
             if (note.fields.note) {
-              return <NotesList id={id} note={note}/>
+              return <NotesList key={note.id} note={note} calendarInfo={props.calendarInfo} setNotesToggleFetch={props.setNotesToggleFetch} />
             }
             console.log(note)
           })}

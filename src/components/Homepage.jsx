@@ -8,7 +8,7 @@ function Homepage(props) {
   const { month, numberOfDays, startDay, year } = props
   const monthsArr = ["Januray", "Feburary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
   const numberOfDaysArr = [28, 29, 30, 31]
-  const daysArr = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+  const daysArr = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
   const yearsArr = []
   // const [month, setMonth] = useState("Month")
   // const [numberOfDays, setNumberOfDays] = useState("Number of days")
@@ -64,7 +64,7 @@ function Homepage(props) {
         <select name='filter'
           className="homepageFilters"
           id="numberOfDaysFilter"
-          onChange={(e) => setNumberOfDays(e.target.value)}>
+          onChange={(e) => setNumberOfDays(parseInt(e.target.value))}>
             <option disabled selected value='Number of days'>Number of days</option>
             {numberOfDaysArr.map(num => {
               return (
@@ -88,7 +88,7 @@ function Homepage(props) {
         <select name='filter'
           className="homepageFilters"
           id="yearFilter"
-          onChange={(e) => setYear(e.target.value)}>
+          onChange={(e) => setYear(parseInt(e.target.value))}>
             <option disabled selected value='Year'>Year</option>
             {yearsArr.map(year => {
               return (

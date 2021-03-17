@@ -1,21 +1,23 @@
 import axios from 'axios'
+import { useHistory } from "react-router-dom"
 import {notesBaseURL, config} from "../services"
-import { useState, useEffect } from 'react'
 
 function NotesList(props) {
-  const [note, setNote] = useState("")
-  const [notesList, setNotesList] = useState("")
-  const erase = async () => {
-    const recipeURL = `${notesBaseURL}/${props.recipe.id}`
-    await axios.delete(notesBaseURL, config)
-    props.setToggleFetch((curr) => !curr)
+  const history = useHistory()
+
+  const erase = async() => {
+    const eraseNoteURL = `${notesBaseURL}/${props.note.id}`
+    console.log(props.note.id)
+    console.log(eraseNoteURL)
+    await axios.delete(eraseNoteURL, config)
+    props.setNotesToggleFetch((curr) => !curr)
     // history.push("/")
   }
 
   return (
     <div>
       <p><span>* </span>{props.note.fields.note}</p>
-      <button type="submit" onClick={erase}>delete</button>
+      <button onClick={erase}>Delete</button>
     </div>
   )
 }

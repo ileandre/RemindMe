@@ -6,7 +6,7 @@ import Events from "./components/Events"
 import NotesList from "./components/NotesList"
 import Homepage from "./components/Homepage"
 import { useEffect, useState } from "react"
-import {notesBaseURL, config} from "./services"
+import {notesBaseURL, eventsBaseURL, config} from "./services"
 import {Route } from "react-router-dom"
 import './App.css';
 import axios from "axios"
@@ -14,6 +14,7 @@ import axios from "axios"
 function App() {
   const [calendarInfo, setCalendarInfo] = useState([])
   const [notesToggleFetch, setNotesToggleFetch] = useState(true)
+  const [eventsInfo, setEventsInfo] = useState([])
   const [month, setMonth] = useState("Month")
   const [numberOfDays, setNumberOfDays] = useState("Number of days")
   const [startDay, setStartDay] = useState("Start day")
@@ -21,11 +22,14 @@ function App() {
   
   useEffect(() => {
     const callAPI = async () => {
-      const resp = await axios.get(notesBaseURL, config)
-      setCalendarInfo(resp.data.records)
+      const notesResp = await axios.get(notesBaseURL, config)
+      const eventsResp = await axios.get(eventsBaseURL, config)
+      setCalendarInfo(notesResp.data.records)
+      setEventsInfo(eventsResp.data.records)
     }
     callAPI()
     console.log(calendarInfo)
+    console.log(eventsInfo)
   }, [notesToggleFetch])
 
   const numberOfDaysArr = []
@@ -54,6 +58,7 @@ function App() {
       <Route exact path="/calendar">
         <Calendar
           calendarInfo={calendarInfo}
+          eventsInfo={eventsInfo}
           setNotesToggleFetch={setNotesToggleFetch}
           month={month}
           numberOfDays={numberOfDays}
@@ -61,18 +66,27 @@ function App() {
           year={year}/>
       </Route>
 
-      {/* {calendarInfo && calendarInfo[0].fields.numberOfDays.map((day) => (
-        < Route path={`/calendar/${day}`}>
-          <Days />
-        </Route>
-      ))} */}
-
-      {numberOfDaysArr && numberOfDaysArr.map((num) => {
-        <Route path={`/events/${year}/${month}/${num}`}>
-          <Events calendarInfo={calendarInfo} />
+      {/* {numberOfDaysArr && numberOfDaysArr.map((num) => {
+        <Route path={`/events/:year/:month/${num}`}>
+          <Events eventsInfo={eventsInfo} />
         </Route>
         // console.log(year, month, num)
+      })} */}
+
+      {numberOfDaysArr && numberOfDaysArr.map((date) => {
+        <Route path={`/events/:year/:month/${date}`}>
+          return <Events eventsInfo={eventsInfo} />
+        </Route>
+        console.log(year, month, date)
       })}
+
+      <Route path="/notes/:year/:month/:id">
+        <NotesList calendarInfo={calendarInfo} />
+      </Route>
+
+      <Route path="/events/2021/January/21/the">
+        <NotesList calendarInfo={calendarInfo} />
+      </Route>
 
     </div>
   );

@@ -1,7 +1,10 @@
+import EventsForm from "../components/EventsForm"
+console.log("You're in the events component")
 function Events() {
   return (
     <div>
-      <h1>Events go here</h1> 
+      <EventsForm />
+      
     </div>
 
   )
