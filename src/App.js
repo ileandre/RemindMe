@@ -12,38 +12,61 @@ import './App.css';
 import axios from "axios"
 
 function App() {
-  const [calendarInfo, setCalendarInfo] = useState()
+  const [calendarInfo, setCalendarInfo] = useState([])
   const [toggleFetch, setToggleFetch] = useState(true)
+  const [month, setMonth] = useState("Month")
+  const [numberOfDays, setNumberOfDays] = useState("Number of days")
+  const [startDay, setStartDay] = useState("Start day")
+  const [year, setYear] = useState("Year")
 
   useEffect(() => {
-    const callAPI = async() => {
+    const callAPI = async () => {
       const resp = await axios.get(notesBaseURL, config)
       setCalendarInfo(resp.data.records)
     }
     callAPI()
     console.log(calendarInfo)
-  }, [])
+  }, [toggleFetch])
+
+
 
   return (
     <div className="App">
+
       <Route exact path="/">
-        <Homepage calendarInfo={calendarInfo} setToggleFetch={setToggleFetch}/>
+        <Homepage
+          calendarInfo={calendarInfo}
+          setToggleFetch={setToggleFetch}
+          setMonth={setMonth}
+          setNumberOfDays={setNumberOfDays}
+          setStartDay={setStartDay}
+          setYear={setYear}
+          month={month}
+          numberOfDays={numberOfDays}
+          startDay={startDay}
+          year={year}/>
       </Route>
 
-      <Route path="/calendar">
-      <Calendar />
-        {/* <Calendar calendarInfo={calendarInfo} /> */}
+      <Route exact path="/calendar">
+        <Calendar
+          calendarInfo={calendarInfo}
+          month={month}
+          numberOfDays={numberOfDays}
+          startDay={startDay}
+          year={year}/>
       </Route>
 
-      <Route path="/:day">
-        <Days />
-      </Route>
-
-      <Route path="/:day/:id">
+      {/* {calendarInfo && calendarInfo[0].fields.numberOfDays.map((day) => (
+        < Route path={`/calendar/${day}`}>
+          <Days />
+        </Route>
+      ))} */}
+      
+      <Route exact path="/events">
         <Events />
       </Route>
 
-      <Route path="/:month/:id">
+      <Route exact path="/:month/:id">
         <NotesList />
       </Route>
 

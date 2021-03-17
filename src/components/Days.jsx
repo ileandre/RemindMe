@@ -1,10 +1,12 @@
 function Days(props) {
 
   return(
-    <div>
-        <div>
-        <h3>{props.num}</h3>
-        </div>
+    <div className="date">
+      {/* <div className="dateNumbers"> */}
+        <h3 className="dateNumbers">{props.num}</h3>
+      {/* </div> */}
+      <div className="dateSpaces">
+      </div>
     </div>
   )
 }
