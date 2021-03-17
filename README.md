@@ -127,7 +127,7 @@ NOTES
 |  Day | Deliverable | Status
 |---|---| ---|
 |Mar 13-14 | Prompt / Wireframes / Priority Matrix / Timeframes | Complete
-|Mar 15| Project Approval/Airtable set up/Pseudocode | 
+|Mar 15| Project Approval/Airtable set up/Pseudocode | Complete
 |Mar 16-18| Core Application Structure (components/CRUD data) | 
 |Mar 19-20| Styling with CSS  | 
 |Mar 21| Post-MVP/clean code | 
@@ -138,13 +138,13 @@ NOTES
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Psuedo code | L | 2hrs |  |  |
-| Setup Airtable | H | 2hrs|  |  |
-| API Functionality | H | 3hrs|  |  |
-| Create Homepage component with Link | H | 2hrs|  |  |
-| Create Calendar component with Link and Renders | H | 5hrs|  |  |
+| Psuedo code | L | 2hrs | 2.5hrs |  |
+| Setup Airtable | H | 2hrs| 1.5hrs |  |
+| API Functionality | H | 3hrs| 3.5hrs |  |
+| Create Homepage component with Link | H | 2hrs| 3hrs |  |
+| Create Calendar component with Link and Renders | H | 5hrs| 6hrs |  |
 | Create Notes component with buttons and access API | H | 4hrs|  |  |
-| Create Day Agenda component with renders and API access | H | 4hrs |  |  |
+| Create Day Agenda component with renders and API access | H | 4hrs | 3.5hrs |  |
 | Create Event component with buttons and access API | H | 3hrs |  |  |
 | Create Form component with button and access API | H | 3hrs |  |  |
 | CSS General Styling | H | 10hrs |  |  |
