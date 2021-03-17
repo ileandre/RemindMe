@@ -1,7 +1,7 @@
 import axios from "axios"
-import { Link, useHistory } from "react-router-dom"
+import { useHistory } from "react-router-dom"
 import { notesBaseURL, config } from "../services"
-import {useState} from 'react'
+// import {useState} from 'react'
 
 function Homepage(props) {
   const { setMonth, setNumberOfDays, setStartDay, setYear } = props
@@ -24,7 +24,9 @@ function Homepage(props) {
     e.preventDefault()
     // console.log(numberOfDays)
     // console.log(year)
-    if (month !== "Month" && numberOfDays !== "Number of days" && startDay !== "Start day" && year !== "Year") {
+    if (month !== "Month" && numberOfDays
+      !== "Number of days" && startDay
+      !== "Start day" && year !== "Year") {
       const newCalendarInfo = {
         month,
         note: "",
@@ -32,7 +34,7 @@ function Homepage(props) {
         startDay,
         year,
       }
-      console.log(newCalendarInfo)
+      // console.log(newCalendarInfo)
       await axios.post(notesBaseURL,{fields: newCalendarInfo}, config)
     } else {
       <h2>"Please fill in ALL the fields."</h2>

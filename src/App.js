@@ -1,5 +1,5 @@
 import Calendar from "./components/Calendar"
-import Days from "./components/Days"
+// import Days from "./components/Days"
 // import DayAgenda from "./components/DayAgenda"
 import Events from "./components/Events"
 // import EventsForm from "./components/EventsForm"
@@ -28,16 +28,19 @@ function App() {
       setEventsInfo(eventsResp.data.records)
     }
     callAPI()
-    console.log(calendarInfo)
-    console.log(eventsInfo)
+    // console.log(calendarInfo)
+    // console.log(eventsInfo)
   }, [toggleFetch])
 
   const numberOfDaysArr = []
-  for (let num = 1; num <= parseInt(numberOfDays); num++) {
+  for (let num = 1; num <= numberOfDays; num++) {
     numberOfDaysArr.push(num)
   }
-  console.log(numberOfDaysArr)
 
+  console.log(numberOfDays)
+  console.log(numberOfDaysArr)
+  console.log(month)
+  console.log(year)
   return (
     <div className="App">
 
@@ -46,16 +49,16 @@ function App() {
           calendarInfo={calendarInfo}
           setToggleFetch={setToggleFetch}
           setMonth={setMonth}
-          setNumberOfDays={setNumberOfDays}
-          setStartDay={setStartDay}
-          setYear={setYear}
           month={month}
+          setNumberOfDays={setNumberOfDays}
           numberOfDays={numberOfDays}
+          setStartDay={setStartDay}
           startDay={startDay}
+          setYear={setYear}
           year={year}/>
       </Route>
 
-      <Route exact path="/calendar">
+      <Route path="/calendar">
         <Calendar
           calendarInfo={calendarInfo}
           eventsInfo={eventsInfo}
@@ -74,18 +77,18 @@ function App() {
       })} */}
 
       {numberOfDaysArr && numberOfDaysArr.map((date) => {
-        <Route path={`/events/:year/:month/${date}`}>
-          return <Events eventsInfo={eventsInfo} />
+        <Route path={`/events/${year}/${month}/${date}`}>
+          <Events eventsInfo={eventsInfo} />
         </Route>
-        console.log(year, month, date)
+        // console.log(year, month, date)
       })}
 
       <Route path="/notes/:year/:month/:id">
         <NotesList calendarInfo={calendarInfo} />
       </Route>
 
-      <Route path="/events/2021/January/21/the">
-        <NotesList calendarInfo={calendarInfo} />
+      <Route path="/events/2023/Feburary/1">
+        <NotesList />
       </Route>
 
     </div>
