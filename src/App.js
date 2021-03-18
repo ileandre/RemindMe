@@ -70,26 +70,8 @@ function App() {
           year={year}/>
       </Route>
 
-      {/* {numberOfDaysArr && numberOfDaysArr.map((num) => {
-        <Route path={`/events/:year/:month/${num}`}>
-          <Events eventsInfo={eventsInfo} />
-        </Route>
-        // console.log(year, month, num)
-      })} */}
-
-      {numberOfDaysArr && numberOfDaysArr.map((date) => {
-        <Route path={`/events/${year}/${month}/${date}`}>
-          <Events eventsInfo={eventsInfo} />
-        </Route>
-        // console.log(year, month, date)
-      })}
-
-      <Route path="/notes/:year/:month/:id">
-        <NotesList calendarInfo={calendarInfo} />
-      </Route>
-
-      <Route path="/events/2023/Feburary/1">
-        <NotesList />
+      <Route path="/events/:year/:month/:day">
+        <Events />
       </Route>
 
     </div>
