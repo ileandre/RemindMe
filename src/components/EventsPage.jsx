@@ -1,12 +1,13 @@
 import {useParams} from "react-router-dom"
 import { Link } from "react-router-dom"
+import Events from "./Events"
 
 import axios from 'axios'
 import { eventsBaseURL, config } from "../services"
 import EventsForm from "./EventsForm"
 
 // console.log("You're in the events component")
-function Events(props) {
+function EventsPage(props) {
   const params = useParams()
   const { year, month, day } = params
   // const history = useHistory()
@@ -40,4 +41,4 @@ console.log('back in events')
   )
 }
 
-export default Events
+export default EventsPage

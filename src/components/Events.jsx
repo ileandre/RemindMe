@@ -14,7 +14,7 @@ function Events(props) {
   }
 
   return (
-    <div id={index} className="eventsList">
+    <div className="eventsList">
       <h3>Title: {props.event.fields.title}</h3>
       <p>Time: {props.event.fields.time}</p>
       <p>Description: {props.event.fields.description}</p>
