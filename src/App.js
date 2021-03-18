@@ -71,7 +71,7 @@ function App() {
       </Route>
 
       <Route path="/events/:year/:month/:day">
-        <Events />
+        <Events eventsInfo={eventsInfo} />
       </Route>
 
     </div>

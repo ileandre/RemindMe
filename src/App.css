@@ -38,10 +38,10 @@ select {
   grid-template-columns: 3fr 1fr;
 }
 
-.dates {
+.calendar a{
   padding-bottom: 40px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  /* grid-template-columns: repeat(4, 1fr); */
   grid-template-areas: 
   "W W W D D"
   "W W W D D"
@@ -49,13 +49,18 @@ select {
   "W W W W W";
 }
 
-.dateNumbers {
+.daysNumbers {
   grid-area: D;
   margin: 0px;
 }
 
-.dateSpaces {
+.daysSpaces {
   grid-area: W;
+}
+
+.eventForm label {
+  display: block;
+  text-align: left;
 }
 
 .homepage button {

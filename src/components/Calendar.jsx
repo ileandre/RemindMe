@@ -11,16 +11,11 @@ function Calendar(props) {
 
   
   const numberOfDaysArr = []
-  for (let date = 1; date <= parseInt(numberOfDays); date++) {
+  for (let day = 1; day <= parseInt(numberOfDays); day++) {
     numberOfDaysArr.push(<>
-        <Days date={date} month={month} year={year}/>
+        <Days day={day} month={month} year={year}/>
     </>)
   }
-
-  // const numberOfDaysArr = []
-  // for (let date = 1; date <= parseInt(numberOfDays); date++) {
-  //   numberOfDaysArr.push(date)
-  // }
   
   return(
     <div className="calendarPage">
@@ -33,12 +28,6 @@ function Calendar(props) {
       <h1>Month Name and Year</h1>
       <div className="calendarBoard">
         <div className="calendar">
-          {/* {numberOfDaysArr && numberOfDaysArr.map((date) => {
-            return (<Days
-              date={date}
-              month={month}
-              year={year}/>)
-          })} */}
           {numberOfDaysArr}
         </div>
         <div className="notesList">

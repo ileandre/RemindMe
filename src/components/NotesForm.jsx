@@ -4,7 +4,7 @@ import { useState } from 'react'
 
 function NotesForm(props) {
   const [note, setNote] = useState("")
-const{month, numberOfDays, startDay, year} = props
+  const{month, numberOfDays, startDay, year} = props
 
   const handleSubmit = async(e) => {
     e.preventDefault()
