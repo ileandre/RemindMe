@@ -1,9 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+/* font-family: 'Permanent Marker', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&family=Permanent+Marker&display=swap');
+/* font-family: 'Pangolin', cursive;
+font-family: 'Permanent Marker', cursive; */
+
 * {
   box-sizing: border-box; 
-  border: gold solid 2px;
+  border: gold solid 0.5px;
 }
 
 /*--------------------TAGS--------------------*/
+
+select {
+  margin-left: 10px;
+  margin-bottom: 10px;
+  font-size: 17px;
+}
 
 /*--------------------CLASS--------------------*/
 
@@ -44,6 +56,26 @@
 
 .dateSpaces {
   grid-area: W;
+}
+
+.homepage button {
+  margin-top: 35px; 
+  border-radius: 4px;
+  font-size: 15px;
+  padding: 5px;
+}
+
+.homepage h1 {
+  font-size: 20px;
+  font-family: 'Pangolin', cursive;
+  margin: 40px 40px;
+}
+
+.homepage span {
+  font-size: 35px;
+  display: block;
+  font-family: 'Permanent Marker', cursive;
+  
 }
 
 /*--------------------IDs--------------------*/
