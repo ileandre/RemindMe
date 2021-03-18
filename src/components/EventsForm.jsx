@@ -7,6 +7,8 @@ function EventsForm(props) {
   const [time, setTime] = useState("")
   const [description, setDescription] = useState("")
 
+  console.log(props.day)
+
   const handleSubmit = async(e) => {
     e.preventDefault()
     const newEvent = {
@@ -14,12 +16,16 @@ function EventsForm(props) {
       time,
       description,
       month: props.month,
-      day: props.day,
-      year: props.year
+      day: parseInt(props.day),
+      year: parseInt(props.year)
     }
     await axios.post(eventsBaseURL, {fields: newEvent}, config)
     props.setToggleFetch((curr) => !curr)
+    {
+      console.log("event form axios call made")
+      console.log(newEvent)}
   }
+  
 
   console.log("You're in the EventsForm component")
 

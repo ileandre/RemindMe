@@ -71,7 +71,7 @@ function App() {
       </Route>
 
       <Route path="/events/:year/:month/:day">
-        <Events eventsInfo={eventsInfo} />
+        <Events eventsInfo={eventsInfo} setToggleFetch={setToggleFetch}/>
       </Route>
 
     </div>
