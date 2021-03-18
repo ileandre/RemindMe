@@ -16,8 +16,7 @@ function App() {
   const [toggleFetch, setToggleFetch] = useState(true)
   const [eventsInfo, setEventsInfo] = useState([])
   const [month, setMonth] = useState("Month")
-  const [numberOfDays, setNumberOfDays] = useState("Number of days")
-  const [numberOfDaysArr, setNumberOfDaysArr] = useState([])
+  const [numberOfDays, setNumberOfDays] = useState()
   const [startDay, setStartDay] = useState("Start day")
   const [year, setYear] = useState("Year")
   
@@ -34,10 +33,9 @@ function App() {
   }, [toggleFetch])
 
 
-  console.log(numberOfDays)
-  console.log(numberOfDaysArr)
-  console.log(month)
-  console.log(year)
+  // console.log(numberOfDays)
+  // console.log(month)
+  // console.log(year)
 
   return (
     <div className="App">
@@ -61,14 +59,20 @@ function App() {
           calendarInfo={calendarInfo}
           eventsInfo={eventsInfo}
           setToggleFetch={setToggleFetch}
+          setNumberOfDays={setNumberOfDays}
+          numberOfDays={numberOfDays}
           month={month}
-          setNumberOfDaysArr={setNumberOfDaysArr}
           startDay={startDay}
           year={year}/>
       </Route>
 
       <Route path="/events/:year/:month/:day">
-        <EventsPage eventsInfo={eventsInfo} setToggleFetch={setToggleFetch}/>
+        <EventsPage
+          eventsInfo={eventsInfo}
+          setToggleFetch={setToggleFetch}
+          setNumberOfDays={setNumberOfDays}
+          numberOfDays={numberOfDays}
+        />
       </Route>
 
     </div>

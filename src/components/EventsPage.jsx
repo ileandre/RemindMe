@@ -12,7 +12,9 @@ function EventsPage(props) {
   const { year, month, day } = params
   // const history = useHistory()
   
-  
+  console.log(props.numberOfDays)
+  console.log(props.numberOfDaysArr)
+
 console.log('back in events')
   return (
     <div className="eventPage">
@@ -26,15 +28,23 @@ console.log('back in events')
           return <Events
             event={event}
             eventsInfo={props.eventsInfo}
-            setToggleFetch={props.setToggleFetch} />
+            setToggleFetch={props.setToggleFetch}
+            setNumberOfDays={props.setNumberOfDays}
+            numberOfDays={props.numberOfDays}/>
         }
-        { console.log(event.fields.year, event.fields.month, event.fields.day) }
-        {console.log(parseInt(year), month, parseInt(day))}
+        // { console.log(event.fields.year, event.fields.month, event.fields.day) }
+        // {console.log(parseInt(year), month, parseInt(day))}
       })}
       
       <div className="eventsForm">
         <h1>Form</h1>
-        <EventsForm year={year} month={month} day={day} setToggleFetch={props.setToggleFetch}/>
+        <EventsForm
+          year={year}
+          month={month}
+          day={day}
+          setToggleFetch={props.setToggleFetch}
+          setNumberOfDays={props.setNumberOfDays}
+          numberOfDays={props.numberOfDays} />
       </div>
     </div>
 

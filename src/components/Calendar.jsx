@@ -2,22 +2,29 @@ import Days from "../components/Days"
 import NotesList from "../components/NotesList"
 import NotesForm from "../components/NotesForm"
 import { Link } from "react-router-dom"
+import {useEffect} from "react"
 
 function Calendar(props) {
-  const { month, numberOfDays, numberOfDaysArr, setNumberOfDaysArr, year } = props
+  const { month, numberOfDays, year } = props
+  const numOfDaysArr = []
 
   // const [calendarInfo, setCalendarInfo] = useState()
   // const numberOfDays = calendarInfo[0].fields.numberOfDays
 
+  console.log(numberOfDays)
+  // console.log(month)
+  // console.log(year)
+
+    for (let day = 1; day <= numberOfDays; day++) {
+      numOfDaysArr.push(<>
+        <Days day={day} month={month} year={year} />
+      </>)
+    }
   
-  const numOfDaysArr = []
-  for (let day = 1; day <= parseInt(numberOfDays); day++) {
-    numOfDaysArr.push(<>
-        <Days day={day} month={month} year={year}/>
-    </>)
-  }
-  setNumberOfDaysArr(numOfDaysArr)
-  
+  console.log(numOfDaysArr)
+  // props.setNumberOfDaysArr(numOfDaysArr)
+  // console.log(props.numberOfDaysArr)
+
   return(
     <div className="calendarPage">
       <nav>
@@ -29,7 +36,7 @@ function Calendar(props) {
       <h1>Month Name and Year</h1>
       <div className="calendarBoard">
         <div className="calendar">
-          {numberOfDaysArr}
+          {numOfDaysArr}
         </div>
         <div className="notesList">
           {props.calendarInfo.map((note) => {
@@ -41,7 +48,7 @@ function Calendar(props) {
                 setToggleFetch={props.setToggleFetch}
               />
             }
-            console.log(note)
+            // console.log(note)
           })}
           <NotesForm 
             month={month}

@@ -7,7 +7,10 @@ function EventsForm(props) {
   const [time, setTime] = useState("")
   const [description, setDescription] = useState("")
 
-  console.log(props.day)
+  // console.log(props.day)
+  console.log(props.numberOfDays)
+  console.log(props.numberOfDaysArr)
+
 
   const handleSubmit = async(e) => {
     e.preventDefault()

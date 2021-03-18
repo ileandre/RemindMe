@@ -12,6 +12,8 @@ function Events(props) {
     props.setToggleFetch((curr) => !curr)
     // history.push("/calendar")
   }
+  console.log(props.numberOfDays)
+  console.log(props.numberOfDaysArr)
 
   return (
     <div className="eventsList">
