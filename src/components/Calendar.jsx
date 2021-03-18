@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"
 import {useEffect} from "react"
 
 function Calendar(props) {
-  const { month, numberOfDays, year } = props
+  const { month, numberOfDays, year} = props
   const numOfDaysArr = []
 
   // const [calendarInfo, setCalendarInfo] = useState()
@@ -15,11 +15,20 @@ function Calendar(props) {
   // console.log(month)
   // console.log(year)
 
+  
     for (let day = 1; day <= numberOfDays; day++) {
-      numOfDaysArr.push(<>
-        <Days day={day} month={month} year={year} />
-      </>)
-    }
+        numOfDaysArr.push(<>
+          <Days day={day} month={month} year={year} />
+        </>)
+      }
+  
+    // setNumberOfDaysArr([...numOfDaysArr])
+  
+  // for (let day = 1; day <= numberOfDays; day++) {
+  //   setNumberOfDaysArr([...numberOfDaysArr, <>
+  //     <Days day={day} month={month} year={year} />
+  //   </>])
+  // }
   
   console.log(numOfDaysArr)
   // props.setNumberOfDaysArr(numOfDaysArr)

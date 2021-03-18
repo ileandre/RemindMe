@@ -28,7 +28,7 @@ console.log('back in events')
           return <Events
             event={event}
             eventsInfo={props.eventsInfo}
-            setToggleFetch={props.setToggleFetch}
+            setEventToggleFetch={props.setEventToggleFetch}
             setNumberOfDays={props.setNumberOfDays}
             numberOfDays={props.numberOfDays}/>
         }
@@ -42,7 +42,7 @@ console.log('back in events')
           year={year}
           month={month}
           day={day}
-          setToggleFetch={props.setToggleFetch}
+          setEventToggleFetch={props.setEventToggleFetch}
           setNumberOfDays={props.setNumberOfDays}
           numberOfDays={props.numberOfDays} />
       </div>

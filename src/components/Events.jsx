@@ -9,7 +9,7 @@ function Events(props) {
     console.log(props.event.id)
     console.log(eraseEventURL)
     await axios.delete(eraseEventURL, config)
-    props.setToggleFetch((curr) => !curr)
+    props.setEventToggleFetch((curr) => !curr)
     // history.push("/calendar")
   }
   console.log(props.numberOfDays)

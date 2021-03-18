@@ -23,7 +23,7 @@ function EventsForm(props) {
       year: parseInt(props.year)
     }
     await axios.post(eventsBaseURL, {fields: newEvent}, config)
-    props.setToggleFetch((curr) => !curr)
+    props.setEventToggleFetch((curr) => !curr)
     {
       console.log("event form axios call made")
       console.log(newEvent)}
