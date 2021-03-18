@@ -4,19 +4,19 @@ import NotesForm from "../components/NotesForm"
 import { Link } from "react-router-dom"
 
 function Calendar(props) {
-  const { month, numberOfDays, year } = props
+  const { month, numberOfDays, numberOfDaysArr, setNumberOfDaysArr, year } = props
 
   // const [calendarInfo, setCalendarInfo] = useState()
   // const numberOfDays = calendarInfo[0].fields.numberOfDays
 
   
-  const numberOfDaysArr = []
+  const numOfDaysArr = []
   for (let day = 1; day <= parseInt(numberOfDays); day++) {
-    numberOfDaysArr.push(<>
+    numOfDaysArr.push(<>
         <Days day={day} month={month} year={year}/>
     </>)
   }
-  
+  setNumberOfDaysArr(numOfDaysArr)
   
   return(
     <div className="calendarPage">

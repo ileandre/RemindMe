@@ -1,5 +1,5 @@
 import Calendar from "./components/Calendar"
-// import Days from "./components/Days"
+import Days from "./components/Days"
 // import DayAgenda from "./components/DayAgenda"
 import EventsPage from "./components/EventsPage"
 // import EventsForm from "./components/EventsForm"
@@ -17,6 +17,7 @@ function App() {
   const [eventsInfo, setEventsInfo] = useState([])
   const [month, setMonth] = useState("Month")
   const [numberOfDays, setNumberOfDays] = useState("Number of days")
+  const [numberOfDaysArr, setNumberOfDaysArr] = useState([])
   const [startDay, setStartDay] = useState("Start day")
   const [year, setYear] = useState("Year")
   
@@ -32,10 +33,6 @@ function App() {
     // console.log(eventsInfo)
   }, [toggleFetch])
 
-  const numberOfDaysArr = []
-  for (let num = 1; num <= numberOfDays; num++) {
-    numberOfDaysArr.push(num)
-  }
 
   console.log(numberOfDays)
   console.log(numberOfDaysArr)
@@ -65,7 +62,7 @@ function App() {
           eventsInfo={eventsInfo}
           setToggleFetch={setToggleFetch}
           month={month}
-          numberOfDays={numberOfDays}
+          setNumberOfDaysArr={setNumberOfDaysArr}
           startDay={startDay}
           year={year}/>
       </Route>
