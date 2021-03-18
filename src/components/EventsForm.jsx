@@ -37,10 +37,6 @@ function EventsForm(props) {
     }
     await axios.post(eventsBaseURL, {fields: newEvent}, config)
     props.setEventToggleFetch((curr) => !curr)
-    {
-      console.log("event form axios call made")
-      console.log(newEvent)
-    }
     setTitle("")
     setTime("")
     setDescription("")

@@ -2,7 +2,6 @@ import axios from 'axios'
 // import { useHistory } from "react-router-dom"
 import { eventsBaseURL, config } from "../services"
 // import { Link } from "react-router-dom"
-import {useState} from "react"
 
 function Events(props) {
   const task = props.event.fields

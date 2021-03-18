@@ -1,9 +1,6 @@
 import {useParams} from "react-router-dom"
 import { Link } from "react-router-dom"
 import Events from "./Events"
-import { useState } from "react"
-import axios from 'axios'
-import { eventsBaseURL, config } from "../services"
 import EventsForm from "./EventsForm"
 
 // console.log("You're in the events component")
@@ -25,12 +22,12 @@ console.log('back in events')
       
       {props.eventsInfo.map((event) => {
         if (event.fields.year === parseInt(year) && event.fields.month === month.toString() && event.fields.day === parseInt(day)) {
-          return <Events
+          return (<Events
             event={event}
             eventsInfo={props.eventsInfo}
             setEventToggleFetch={props.setEventToggleFetch}
             setNumberOfDays={props.setNumberOfDays}
-            numberOfDays={props.numberOfDays}/>
+            numberOfDays={props.numberOfDays}/>)
         }
         // { console.log(event.fields.year, event.fields.month, event.fields.day) }
         // {console.log(parseInt(year), month, parseInt(day))}

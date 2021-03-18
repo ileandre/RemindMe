@@ -1,9 +1,7 @@
 import axios from 'axios'
-import { useHistory } from "react-router-dom"
 import {notesBaseURL, config} from "../services"
 
 function NotesList(props) {
-  const history = useHistory()
 
   const erase = async() => {
     const eraseNoteURL = `${notesBaseURL}/${props.note.id}`
@@ -11,7 +9,6 @@ function NotesList(props) {
     console.log(eraseNoteURL)
     await axios.delete(eraseNoteURL, config)
     props.setToggleFetch((curr) => !curr)
-    // history.push("/")
   }
 
   return (
