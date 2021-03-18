@@ -1,7 +1,7 @@
 import Calendar from "./components/Calendar"
 // import Days from "./components/Days"
 // import DayAgenda from "./components/DayAgenda"
-import Events from "./components/Events"
+import EventsPage from "./components/EventsPage"
 // import EventsForm from "./components/EventsForm"
 import NotesList from "./components/NotesList"
 import Homepage from "./components/Homepage"
@@ -71,7 +71,7 @@ function App() {
       </Route>
 
       <Route path="/events/:year/:month/:day">
-        <Events eventsInfo={eventsInfo} setToggleFetch={setToggleFetch}/>
+        <EventsPage eventsInfo={eventsInfo} setToggleFetch={setToggleFetch}/>
       </Route>
 
     </div>
