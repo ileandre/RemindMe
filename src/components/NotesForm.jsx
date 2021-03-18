@@ -17,6 +17,7 @@ function NotesForm(props) {
     }
     await axios.post(notesBaseURL, { fields: newNote }, config)
     props.setToggleFetch((curr) => !curr)
+    setNote("")
   }
 
   return (

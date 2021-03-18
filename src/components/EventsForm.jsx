@@ -39,7 +39,11 @@ function EventsForm(props) {
     props.setEventToggleFetch((curr) => !curr)
     {
       console.log("event form axios call made")
-      console.log(newEvent)}
+      console.log(newEvent)
+    }
+    setTitle("")
+    setTime("")
+    setDescription("")
   }
   
 
