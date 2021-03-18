@@ -16,6 +16,8 @@ function Calendar(props) {
   // console.log(year)
 
   
+
+  
     for (let day = 1; day <= numberOfDays; day++) {
         numOfDaysArr.push(<>
           <Days day={day} month={month} year={year} />
