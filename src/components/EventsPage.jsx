@@ -1,7 +1,7 @@
 import {useParams} from "react-router-dom"
 import { Link } from "react-router-dom"
 import Events from "./Events"
-
+import { useState } from "react"
 import axios from 'axios'
 import { eventsBaseURL, config } from "../services"
 import EventsForm from "./EventsForm"
@@ -42,6 +42,7 @@ console.log('back in events')
           year={year}
           month={month}
           day={day}
+          eventsInfo={props.eventsInfo}
           setEventToggleFetch={props.setEventToggleFetch}
           setNumberOfDays={props.setNumberOfDays}
           numberOfDays={props.numberOfDays} />

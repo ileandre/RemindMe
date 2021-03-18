@@ -1,16 +1,29 @@
 import axios from 'axios'
 import {eventsBaseURL, config} from "../services"
 import { useState } from 'react'
+// import { useParams } from 'react-router-dom'
 
 function EventsForm(props) {
   const [title, setTitle] = useState("")
   const [time, setTime] = useState("")
   const [description, setDescription] = useState("")
+  // const params = useParams()
 
   // console.log(props.day)
   console.log(props.numberOfDays)
   console.log(props.numberOfDaysArr)
 
+  // useEffect(() => {
+  //   if (params.id) {
+  //     const editEvent = props.eventsInfo.find((event) => event.id === params.id)
+  //     console.log(params.id)
+  //     if (editEvent) {
+  //       setTitle(editEvent.fields.title)
+  //       setTime(editEvent.fields.time)
+  //       setDescription(editEvent.fields.description)
+  //     }
+  //   }
+  // },[props.eventInfo, params.id])
 
   const handleSubmit = async(e) => {
     e.preventDefault()

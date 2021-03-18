@@ -49,7 +49,7 @@ function Calendar(props) {
         </div>
         <div className="notesList">
           {props.calendarInfo.map((note) => {
-            if (note.fields.note) {
+            if (note.fields.note && note.fields.year === parseInt(year) && note.fields.month === month.toString()) {
               return <NotesList
                 key={note.id}
                 note={note}

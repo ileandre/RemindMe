@@ -18,11 +18,8 @@ function App() {
   const [eventsInfo, setEventsInfo] = useState([])
   const [month, setMonth] = useState("Month")
   const [numberOfDays, setNumberOfDays] = useState()
-  // const [numberOfDaysArr, setNumberOfDaysArr] = useState([])
   const [startDay, setStartDay] = useState("Start day")
   const [year, setYear] = useState("Year")
-  // const [numOfDaysArr, setNumOfDaysArr] = useState([])
-  // const [run, setRun] = useState()
   
   useEffect(() => {
     const callAPI = async () => {
@@ -75,18 +72,12 @@ function App() {
           setToggleFetch={setToggleFetch}
           setNumberOfDays={setNumberOfDays}
           numberOfDays={numberOfDays}
-          // setNumberOfDaysArr={setNumberOfDaysArr}
-          // numberOfDaysArr={numberOfDaysArr}
-          // run={run}
-          // setRun={setRun}
-          // numOfDaysArr={numOfDaysArr}
-          // setNumOfDaysArr={setNumOfDaysArr}
           month={month}
           startDay={startDay}
           year={year}/>
       </Route>
 
-      <Route path="/events/:year/:month/:day">
+      <Route path="/events/:year/:month/:day/">
         <EventsPage
           eventsInfo={eventsInfo}
           setEventToggleFetch={setEventToggleFetch}
@@ -94,6 +85,15 @@ function App() {
           numberOfDays={numberOfDays}
         />
       </Route>
+
+      {/* <Route path="/events/:year/:month/:day/:id">
+        <EventsPage
+          eventsInfo={eventsInfo}
+          setEventToggleFetch={setEventToggleFetch}
+          setNumberOfDays={setNumberOfDays}
+          numberOfDays={numberOfDays}
+        />
+      </Route> */}
 
     </div>
   );
