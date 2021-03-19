@@ -7,6 +7,7 @@ import {useHistory} from "react-router-dom"
 function Calendar(props) {
   const { month, numberOfDays, year, startDay} = props
   const numOfDaysArr = []
+  const daysArr = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
 const history = useHistory()
   // setToggleFetch((curr) => !curr)
   // console.log(numberOfDays)
@@ -56,6 +57,10 @@ const history = useHistory()
       <p>{year}</p>
       <div className="calendarBoard">
         <div className="calendar">
+          {daysArr.map((day) => {
+            return <div className="dayNames">{day.toString()}</div>
+            {console.log(day)}
+          })}
           {numOfDaysArr}
         </div>
         <div className="notesList">

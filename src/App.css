@@ -50,6 +50,10 @@ select {
   box-sizing: border-box; 
   border: black solid 2px;
 }
+.dayNames {
+  font-size: 9px;
+  font-weight: bold;
+}
 
 .days {
   display: grid;
