@@ -13,7 +13,7 @@ function NotesList(props) {
 
   return (
     <div className="notes">
-      <label> * {props.note.fields.note}</label>
+      <label>{props.note.fields.note}</label>
       <button onClick={erase}>Delete</button>
     </div>
   )
