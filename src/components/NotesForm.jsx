@@ -21,13 +21,12 @@ function NotesForm(props) {
   }
 
   return (
-    <div>
-    <h1>Notes form</h1>
+    <div className="notesForm">
     <form onSubmit={handleSubmit}>
       <label>New Note: 
         <textarea type="textarea" value={note} onChange={(e) => setNote(e.target.value)}/>
-        </label>
-        <button type="submit">Add Note</button>
+      </label>
+      <button type="submit">Add Note</button>
     </form>
     </div>
   )

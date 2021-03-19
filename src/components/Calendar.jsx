@@ -2,25 +2,32 @@ import Days from "../components/Days"
 import NotesList from "../components/NotesList"
 import NotesForm from "../components/NotesForm"
 import { Link } from "react-router-dom"
+import {useHistory} from "react-router-dom"
 
 function Calendar(props) {
-  const { month, numberOfDays, year} = props
+  const { month, numberOfDays, year, setToggleFetch} = props
   const numOfDaysArr = []
+const history = useHistory()
+  // setToggleFetch((curr) => !curr)
+  // console.log(numberOfDays)
 
 
-  console.log(numberOfDays)
 
   // useEffect(() => {
   //   if()
   // },[])
   //numberOfDays
-    for (let day = 1; day <= 30; day++) {
+    for (let day = 1; day <= numberOfDays; day++) {
         numOfDaysArr.push(<>
           <Days day={day} month={month} year={year} />
         </>)
       }
 
   console.log(numOfDaysArr)
+
+  if (!numberOfDays) {
+    history.push("/")
+  }
 
   return(
     <div className="calendarPage">
@@ -30,7 +37,8 @@ function Calendar(props) {
         </Link>
         <h2>RemindMe</h2>
       </nav>
-      <h1>Month Name and Year</h1>
+      <h1>{month} </h1>
+      <p>{year}</p>
       <div className="calendarBoard">
         <div className="calendar">
           {numOfDaysArr}
@@ -45,6 +53,7 @@ function Calendar(props) {
               />)
             }
           })}
+          <h1>Notes </h1>
           <NotesForm 
             month={month}
             year={year}

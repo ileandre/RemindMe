@@ -97,6 +97,17 @@ select {
   
 }
 
+.notesForm button {
+  display: block;
+  align-content: center;
+  margin-left: 0 auto;
+}
+
+.notesForm label {
+  display: block;
+  text-align: left;
+}
+
 /*--------------------IDs--------------------*/
 
 
