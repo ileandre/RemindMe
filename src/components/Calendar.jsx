@@ -48,14 +48,12 @@ const history = useHistory()
   return(
     <div className="calendarPage">
       <nav className="calendarNav">
-        {/* <h2 className="appName" > */}
         <div>
           <Link to="/">
             <button>Home</button>
           </Link>
         </div>
           <div>RemindMe</div>
-        {/* </h2> */}
       </nav>
       <h1 className="calendarMonth">{month} </h1>
       <p className="calendarYear">{year}</p>

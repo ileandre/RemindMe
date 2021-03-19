@@ -108,6 +108,12 @@ select {
   text-align: left;
 }
 
+.eventNav {
+  display: flex;
+  justify-content: left;
+  margin: 5px;
+}
+
 .homepage button {
   margin-top: 35px; 
   border-radius: 4px;
