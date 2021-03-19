@@ -1,7 +1,7 @@
 import axios from "axios"
 import { useHistory } from "react-router-dom"
 import { notesBaseURL, config } from "../services"
-// import {useState} from 'react'
+import {useState} from 'react'
 
 function Homepage(props) {
   const { setMonth, setNumberOfDays, setStartDay, setYear } = props
@@ -10,11 +10,13 @@ function Homepage(props) {
   const numberOfDaysArr = [28, 29, 30, 31]
   const daysArr = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
   const yearsArr = []
+  const history = useHistory()
+  const [error, setError] = useState("")
   // const [month, setMonth] = useState("Month")
   // const [numberOfDays, setNumberOfDays] = useState("Number of days")
   // const [startDay, setStartDay] = useState("Start day")
   // const [year, setYear] = useState("Year")
-  const history = useHistory()
+  
   
   for (let year = 2021; year <= 2121; year++) (
     yearsArr.push(year)
@@ -26,7 +28,7 @@ function Homepage(props) {
     // console.log(year)
     if (month !== "Month" && numberOfDays
       !== "Number of days" && startDay
-      !== "Start day" && year !== "Year") {
+      !== "Start day" && year !== 0) {
       const newCalendarInfo = {
         month,
         note: "",
@@ -34,13 +36,18 @@ function Homepage(props) {
         startDay,
         year,
       }
-      // console.log(newCalendarInfo)
+      console.log(newCalendarInfo)
       await axios.post(notesBaseURL,{fields: newCalendarInfo}, config)
     } else {
       <h2>"Please fill in ALL the fields."</h2>
     }
     props.setToggleFetch((curr) => !curr)
-    history.push("/calendar")
+    
+    if (month === "Month" || numberOfDays === 0 || startDay === "Start day" || year === 0) {
+      setError("ERROR! You must select all the options.")
+    } else  {
+      history.push("/calendar")
+    }
 
   }
   
@@ -106,6 +113,7 @@ function Homepage(props) {
         </div>
       </form>
 
+      <h3>{error}</h3>
     </div>
   )
 }

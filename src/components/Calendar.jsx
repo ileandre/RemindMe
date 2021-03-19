@@ -25,7 +25,7 @@ const history = useHistory()
 
   console.log(numOfDaysArr)
 
-  if (!numberOfDays) {
+  if (numberOfDays === 0) {
     history.push("/")
   }
 

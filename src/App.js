@@ -15,9 +15,9 @@ function App() {
   const [eventToggleFetch, setEventToggleFetch] = useState(true)
   const [eventsInfo, setEventsInfo] = useState([])
   const [month, setMonth] = useState("Month")
-  const [numberOfDays, setNumberOfDays] = useState()
+  const [numberOfDays, setNumberOfDays] = useState(0)
   const [startDay, setStartDay] = useState("Start day")
-  const [year, setYear] = useState("Year")
+  const [year, setYear] = useState(0)
   
   useEffect(() => {
     const callAPI = async () => {
