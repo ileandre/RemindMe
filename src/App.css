@@ -108,10 +108,21 @@ select {
   text-align: left;
 }
 
+.eventsList {
+  margin: 10px;
+  margin: black solid 2px;
+  background-color:rgb(107, 73, 10);
+  border-radius: 8px;
+}
+
 .eventNav {
   display: flex;
   justify-content: left;
   margin: 5px;
+}
+
+.eventPage {
+  justify-content: center;
 }
 
 .homepage button {
