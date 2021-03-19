@@ -56,7 +56,6 @@ select {
   grid-template-areas: 
   ". . . D D"
   ". . . D D"
-  ". . . . ."
   ". . . . .";
 }
 
@@ -65,11 +64,6 @@ select {
   margin-top: 0px;
   margin-right: 0px;
   border-width: 0px;
-}
-
-.daysSpaces {
-  grid-area: W;
-  padding: 12px;
 }
 
 .eventForm label {

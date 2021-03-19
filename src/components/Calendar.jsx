@@ -17,7 +17,7 @@ const history = useHistory()
   //   if()
   // },[])
   //numberOfDays
-    for (let day = 1; day <= numberOfDays; day++) {
+    for (let day = 1; day <= 30; day++) {
         numOfDaysArr.push(<>
           <Days day={day} month={month} year={year} />
         </>)
@@ -25,9 +25,9 @@ const history = useHistory()
 
   console.log(numOfDaysArr)
 
-  if (numberOfDays === 0) {
-    history.push("/")
-  }
+  // if (numberOfDays === 0) {
+  //   history.push("/")
+  // }
 
   return(
     <div className="calendarPage">
