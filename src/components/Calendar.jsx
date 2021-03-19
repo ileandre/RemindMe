@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"
 import {useHistory} from "react-router-dom"
 
 function Calendar(props) {
-  const { month, numberOfDays, year, setToggleFetch} = props
+  const { month, numberOfDays, year, startDay} = props
   const numOfDaysArr = []
 const history = useHistory()
   // setToggleFetch((curr) => !curr)
@@ -17,7 +17,22 @@ const history = useHistory()
   //   if()
   // },[])
   //numberOfDays
-    for (let day = 1; day <= 30; day++) {
+  let d = 0
+  if (startDay === "Monday") {
+    d = 1
+  } else if (startDay === "Tuesday") {
+    d = 2
+  } else if (startDay === "Wednesday") {
+    d = 3
+  } else if (startDay === "Thursday") {
+    d = 4
+  } else if (startDay === "Friday") {
+    d = 5
+  } else if (startDay === "Saturday") {
+    d = 6
+  }
+
+    for (let day = 1 - d; day <= 30; day++) {
         numOfDaysArr.push(<>
           <Days day={day} month={month} year={year} />
         </>)

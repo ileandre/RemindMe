@@ -69,6 +69,7 @@ function App() {
           eventsInfo={eventsInfo}
           setToggleFetch={setToggleFetch}
           setNumberOfDays={setNumberOfDays}
+          startDay={startDay}
           numberOfDays={numberOfDays}
           month={month}
           startDay={startDay}
