@@ -6,7 +6,7 @@ font-family: 'Permanent Marker', cursive; */
 
 * {
   box-sizing: border-box; 
-  border: gold solid 0.5px;
+  border: rgb(215, 210, 182) solid 0.5px;
 }
 
 /*--------------------TAGS--------------------*/
@@ -33,29 +33,43 @@ select {
   grid-template-columns: repeat(7, 1fr);
 }
 
-.calendarBoard {
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-}
-
 .calendar a{
-  padding-bottom: 40px;
+  padding-bottom: 0px;
   display: grid;
   /* grid-template-columns: repeat(4, 1fr); */
-  grid-template-areas: 
+  /* grid-template-areas: 
   "W W W D D"
   "W W W D D"
   "W W W W W"
-  "W W W W W";
+  "W W W W W"; */
 }
 
-.daysNumbers {
+.calendarBoard {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  box-sizing: border-box; 
+  border: black solid 2px;
+}
+
+.days {
+  display: grid;
+  grid-template-areas: 
+  ". . . D D"
+  ". . . D D"
+  ". . . . ."
+  ". . . . .";
+}
+
+.days h3 {
   grid-area: D;
-  margin: 0px;
+  margin-top: 0px;
+  margin-right: 0px;
+  border-width: 0px;
 }
 
 .daysSpaces {
   grid-area: W;
+  padding: 12px;
 }
 
 .eventForm label {
@@ -86,3 +100,40 @@ select {
 /*--------------------IDs--------------------*/
 
 
+
+/*--------------------Media Query--------------------*/
+
+@media (min-width: 1024px) {
+  
+  .calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+  }
+
+  .calendar a{
+    padding-bottom: 40px;
+    display: grid;
+    /* grid-template-columns: repeat(4, 1fr); */
+    grid-template-areas: 
+    "W W W D D"
+    "W W W D D"
+    "W W W W W"
+    "W W W W W";
+  }
+  .calendarBoard {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    box-sizing: border-box; 
+    border: black solid 2px;
+  }
+
+  .daysNumbers {
+    grid-area: D;
+    margin: 0px;
+  }
+
+  .daysSpaces {
+    grid-area: W;
+  }
+
+}

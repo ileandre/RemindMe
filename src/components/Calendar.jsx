@@ -13,8 +13,8 @@ function Calendar(props) {
   // useEffect(() => {
   //   if()
   // },[])
-  
-    for (let day = 1; day <= numberOfDays; day++) {
+  //numberOfDays
+    for (let day = 1; day <= 30; day++) {
         numOfDaysArr.push(<>
           <Days day={day} month={month} year={year} />
         </>)
