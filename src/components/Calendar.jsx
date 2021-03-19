@@ -47,33 +47,40 @@ const history = useHistory()
 
   return(
     <div className="calendarPage">
-      <nav>
-        <Link to="/">
-          <button>Home</button>
-        </Link>
-        <h2>RemindMe</h2>
+      <nav className="calendarNav">
+        {/* <h2 className="appName" > */}
+        <div>
+          <Link to="/">
+            <button>Home</button>
+          </Link>
+        </div>
+          <div>RemindMe</div>
+        {/* </h2> */}
       </nav>
-      <h1>{month} </h1>
-      <p>{year}</p>
+      <h1 className="calendarMonth">{month} </h1>
+      <p className="calendarYear">{year}</p>
       <div className="calendarBoard">
         <div className="calendar">
-          {daysArr.map((day) => {
-            return <div className="dayNames">{day.toString()}</div>
-            {console.log(day)}
+          {daysArr.map((day, index) => {
+            return <div key={index} className="dayNames">{day.toString()}</div>
           })}
           {numOfDaysArr}
         </div>
         <div className="notesList">
-          {props.calendarInfo.map((note) => {
+          <h1 className="notesTitle">Notes </h1>
+          {props.calendarInfo.map((note, index) => {
             if (note.fields.note && note.fields.year === parseInt(year) && note.fields.month === month.toString()) {
-              return (<NotesList
+              return (
+                <NotesList
+                key={index}
                 note={note}
                 calendarInfo={props.calendarInfo}
                 setToggleFetch={props.setToggleFetch}
-              />)
+                />
+              )
             }
           })}
-          <h1>Notes </h1>
+          
           <NotesForm 
             month={month}
             year={year}

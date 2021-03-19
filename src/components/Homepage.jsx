@@ -58,50 +58,54 @@ function Homepage(props) {
       <p>Choose the month, number of days in that month, its start day and the year of the month you'd like to plan out.</p>
       
       <form onSubmit={handleSubmit}>
-        <select required name='filter'
+        <select defaultValue="Month"
+          name='filter'
           className="homepageFilters"
           id="monthFilter"
           onChange={(e) => setMonth(e.target.value)}>
-            <option disabled selected value='Month'>Month</option>
-            {monthsArr.map(month => {
+            <option disabled value='Month'>Month</option>
+            {monthsArr.map((month, index) => {
               return (
-                <option value={month}>{month}</option>
+                <option key={index} value={month}>{month}</option>
               )
             })}
         </select>
 
-        <select name='filter'
+        <select defaultValue="Number of days"
+          name='filter'
           className="homepageFilters"
           id="numberOfDaysFilter"
           onChange={(e) => setNumberOfDays(parseInt(e.target.value))}>
-            <option disabled selected value='Number of days'>Number of days</option>
-            {numberOfDaysArr.map(num => {
+            <option disabled value='Number of days'>Number of days</option>
+            {numberOfDaysArr.map((num, index) => {
               return (
-                <option value={num}>{num}</option>
+                <option key={index} value={num}>{num}</option>
               )
             })}
         </select>
         
-        <select name='filter'
+        <select defaultValue="Start day" 
+          name='filter'
           className="homepageFilters"
           id="startDayFilter"
           onChange={(e) => setStartDay(e.target.value)}>
-            <option disabled selected value='Start day'>Start day</option>
-            {daysArr.map(day => {
+            <option disabled value='Start day'>Start day</option>
+            {daysArr.map((day, index) => {
               return (
-                <option value={day}>{day}</option>
+                <option key={index} value={day}>{day}</option>
               )
             })}
         </select>
 
-        <select name='filter'
+        <select defaultValue="Year" 
+          name='filter'
           className="homepageFilters"
           id="yearFilter"
           onChange={(e) => setYear(parseInt(e.target.value))}>
-            <option disabled selected value='Year'>Year</option>
-            {yearsArr.map(year => {
+            <option disabled value='Year'>Year</option>
+            {yearsArr.map((year, index) => {
               return (
-                <option value={year}>{year}</option>
+                <option key={index} value={year}>{year}</option>
               )
             })}
         </select>

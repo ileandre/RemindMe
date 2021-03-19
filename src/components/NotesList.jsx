@@ -12,8 +12,8 @@ function NotesList(props) {
   }
 
   return (
-    <div>
-      <p><span>* </span>{props.note.fields.note}</p>
+    <div className="notes">
+      <label> * {props.note.fields.note}</label>
       <button onClick={erase}>Delete</button>
     </div>
   )

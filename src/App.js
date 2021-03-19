@@ -72,7 +72,6 @@ function App() {
           startDay={startDay}
           numberOfDays={numberOfDays}
           month={month}
-          startDay={startDay}
           year={year}/>
       </Route>
 

@@ -4,10 +4,10 @@
 /* font-family: 'Pangolin', cursive;
 font-family: 'Permanent Marker', cursive; */
 
-* {
+/* * {
   box-sizing: border-box; 
   border: rgb(215, 210, 182) solid 0.5px;
-}
+} */
 
 /*--------------------TAGS--------------------*/
 
@@ -28,14 +28,26 @@ select {
   justify-content: center;
 }
 
+.appName {
+  margin-right: 0px;
+  margin-top: 2px;
+}
+
+.appName span{
+  margin-right: 0px;
+}
+
 .calendar {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
+  box-sizing: border-box; 
+  border: black solid 2px;
 }
 
 .calendar a{
   padding-bottom: 0px;
   display: grid;
+  border: black solid 1px;
   /* grid-template-columns: repeat(4, 1fr); */
   /* grid-template-areas: 
   "W W W D D"
@@ -47,12 +59,31 @@ select {
 .calendarBoard {
   display: grid;
   grid-template-rows: 1fr 1fr;
-  box-sizing: border-box; 
-  border: black solid 2px;
 }
+
+.calendarMonth {
+  margin-bottom: 0px;
+  margin-top: 0px;
+  border-width: 1px;
+}
+
+.calendarNav {
+  display: flex;
+  flex-direction: rows;
+  justify-content: space-between;
+  margin: 5px;
+}
+
+.calendarYear {
+  margin-top: 0px;
+  margin-bottom: 3px;
+}
+
 .dayNames {
   font-size: 9px;
   font-weight: bold;
+  border-bottom: black solid 2px;
+  border-left: black solid 1px;
 }
 
 .days {
@@ -94,17 +125,30 @@ select {
   font-family: 'Permanent Marker', cursive;
   
 }
+.notes {
+  margin-bottom: 10px;
+  text-align: left;
+}
 
-.notesForm button {
-  display: block;
+.notes button{
+  margin-left: 15px;
+  font-size: 10px;
+}
+
+.notesTitle {
+margin-bottom: 5px;
+border-bottom: black solid 1px;
+}
+
+.notesFormButton {
   align-content: center;
-  margin-left: 0 auto;
 }
 
 .notesForm label {
   display: block;
   text-align: left;
 }
+
 
 /*--------------------IDs--------------------*/
 
