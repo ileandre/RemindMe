@@ -61,6 +61,7 @@ function Homepage(props) {
       <p>Choose the month, number of days in that month, its start day and the year of the month you'd like to plan out.</p>
       
       <form onSubmit={handleSubmit}>
+        <div className="firstPairOfFilters">
         <select defaultValue="Month"
           name='filter'
           className="homepageFilters"
@@ -86,7 +87,9 @@ function Homepage(props) {
               )
             })}
         </select>
-        
+        </div>
+
+        <div className="secondPairOfFilters">
         <select defaultValue="Start day" 
           name='filter'
           className="homepageFilters"
@@ -112,7 +115,7 @@ function Homepage(props) {
               )
             })}
         </select>
-
+            </div>
         <div>
           {/* <Link to="/calendar"> */}
             <button type="submit">Create Calendar</button>

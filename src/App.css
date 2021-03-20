@@ -76,6 +76,11 @@ select {
   margin: 5px;
 }
 
+.calendarPage {
+  background-color:rgb(179, 175, 174);
+  padding-bottom: 5px;
+}
+
 .calendarYear {
   margin-top: 0px;
   margin-bottom: 3px;
@@ -108,7 +113,7 @@ select {
   border-bottom: black solid 1px;
   }
 
-  .eventDeleteButton {
+.eventDeleteButton {
     display: block;
     margin-top: auto;
     margin-bottom: auto;
@@ -161,11 +166,36 @@ font-size: 13px;
   border-radius: 4px;
 }
 
+.homepage {
+  background-color:rgb(179, 175, 174);
+  margin-bottom: 0px;
+}
+
 .homepage button {
   margin-top: 35px; 
+  margin-bottom: 5px;
   border-radius: 4px;
   font-size: 15px;
   padding: 5px;
+  background-color:rgb(172, 102, 102);
+  color: white;
+  font-family: 'Pangolin', cursive;
+}
+
+.homepage p {
+  color:rgb(104, 78, 52);
+  font-family: 'Pangolin', cursive;
+}
+
+.homepage h3 {
+  color: rgb(194, 17, 17);
+  font-family: 'Pangolin', cursive;
+}
+
+.homepageFilters {
+  background-color:rgb(226, 214, 202);
+  font-family: 'Pangolin', cursive;
+  border-radius: 4px;
 }
 
 .homeTitle h1 {
@@ -181,10 +211,6 @@ font-size: 13px;
   /* display: block; */
   font-family: 'Permanent Marker', cursive;
   display: inline;
-}
-
-.remind {
-color:rgb(172, 102, 102);
 }
 
 .me {
@@ -238,6 +264,9 @@ border-bottom: black solid 1px;
   font-weight: bold;
 }
 
+.remind {
+  color:rgb(172, 102, 102);
+  }
 
 /*--------------------IDs--------------------*/
 
