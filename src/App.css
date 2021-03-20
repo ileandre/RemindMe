@@ -57,7 +57,7 @@ select {
   padding-bottom: 0px;
   display: grid;
   border: black solid 1px;
-  color:rgb(119, 46, 46);
+  color: rgb(8, 12, 73);
   /* grid-template-columns: repeat(4, 1fr); */
   /* grid-template-areas: 
   "W W W D D"
@@ -452,6 +452,7 @@ font-family: 'Permanent Marker', cursive;
     "W W W W W"
     "W W W W W";
   }
+
   .calendarBoard {
     display: grid;
     grid-template-columns: 3fr 1fr;
