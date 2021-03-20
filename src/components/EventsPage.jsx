@@ -20,7 +20,7 @@ console.log('back in events')
           <button>Calendar</button>
         </Link>
       </div>
-      <div className="eventsList">
+      <div className="eventList">
         <h1>{month} {day}, {year}</h1>
         <h2>Events</h2>
         {props.eventsInfo.map((event) => {

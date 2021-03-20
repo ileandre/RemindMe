@@ -103,12 +103,38 @@ select {
   border-width: 0px;
 }
 
+.event h2 {
+  /* margin-bottom: 5px; */
+  border-bottom: black solid 1px;
+  }
+
+  .eventDeleteButton {
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 40%;
+    margin-right: 5px;
+    text-align: right;
+  }
+
 .eventForm label {
   display: block;
   text-align: left;
 }
 
-.eventsList {
+.eventInfo p {
+margin-bottom: 5px;
+margin-top: 5px;
+font-size: 13px;
+/* display: inline; */
+}
+
+.eventInfo span {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.eventList {
   margin: 10px;
   margin: black solid 2px;
   background-color:rgb(107, 73, 10);
@@ -125,6 +151,16 @@ select {
   justify-content: center;
 }
 
+.events {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  padding-top: 10px 10px;
+  text-align: left;
+  background-color: white;
+  border-radius: 4px;
+}
+
 .homepage button {
   margin-top: 35px; 
   border-radius: 4px;
@@ -132,18 +168,29 @@ select {
   padding: 5px;
 }
 
-.homepage h1 {
+.homeTitle h1 {
   font-size: 20px;
   font-family: 'Pangolin', cursive;
   margin: 40px 40px;
+  margin-bottom: 0px;
+  color:rgb(104, 78, 52);
 }
 
-.homepage span {
+.homeTitle span {
   font-size: 35px;
-  display: block;
+  /* display: block; */
   font-family: 'Permanent Marker', cursive;
-  
+  display: inline;
 }
+
+.remind {
+color:rgb(172, 102, 102);
+}
+
+.me {
+  color:rgb(151, 113, 76)
+}
+
 .notes {
   display: flex;
   justify-content: space-between;

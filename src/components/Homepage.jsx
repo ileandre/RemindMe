@@ -6,7 +6,7 @@ import {useState} from 'react'
 function Homepage(props) {
   const { setMonth, setNumberOfDays, setStartDay, setYear } = props
   const { month, numberOfDays, startDay, year } = props
-  const monthsArr = ["Januray", "Feburary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+  const monthsArr = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
   const numberOfDaysArr = [28, 29, 30, 31]
   const daysArr = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
   const yearsArr = []
@@ -54,7 +54,10 @@ function Homepage(props) {
   return (
     <div className="homepage">
 
-      <h1>Welcome to <span>RemindMe</span></h1>
+      <div className="homeTitle">
+        <h1>Welcome to</h1>
+        <span className="remind">Remind</span><span className="me">Me</span>
+      </div>
       <p>Choose the month, number of days in that month, its start day and the year of the month you'd like to plan out.</p>
       
       <form onSubmit={handleSubmit}>

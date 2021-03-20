@@ -18,14 +18,18 @@ function Events(props) {
   console.log(props.numberOfDaysArr)
 
   return (
-    <div className="eventsList">
-      <h3>Title: {task.title}</h3>
-      <p>Time: {task.time}</p>
-      <p>Description: {task.description}</p>
-      {/* <Link to={`/events/${task.year}/${task.month}/${task.day}/${props.event.id}`}>
-        <button>Edit</button>
-      </Link> */}
-      <button onClick={erase}>Delete</button>
+    <div className="events">
+      <div className="eventInfo" >
+        <p><span>Title:</span> {task.title}</p>
+        <p><span>Time:</span> {task.time}</p>
+        <p><span>Description:</span> {task.description}</p>
+        {/* <Link to={`/events/${task.year}/${task.month}/${task.day}/${props.event.id}`}>
+          <button>Edit</button>
+        </Link> */}
+      </div>
+      <div className="eventDeleteButton">
+        <button onClick={erase}>Delete</button>
+      </div>
     </div>
   )
 }
