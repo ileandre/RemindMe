@@ -250,10 +250,18 @@ font-size: 13px;
 }
 
 .homepageFilters {
+  margin: auto;
+  width: 75%;
+  /* display: grid;
+  grid-template-columns: repeat(2, 1fr);  */
+}
+
+.homepageFilters select{
   background-color:rgb(195, 221, 223);
   font-family: 'Pangolin', cursive;
   border-radius: 4px;
   color:rgb(8, 12, 73);
+
 }
 
 .homeTitle h1 {
@@ -343,10 +351,38 @@ font-family: 'Permanent Marker', cursive;
 
 @media (min-width: 768px) {
 
-  .dayDateTitle {
-    font-size: 50px;
+  button {
+    font-size: 25px;
   }
   
+  select {
+    display: inline;
+  }
+
+  .calendarNav span {
+    font-size: 30px;
+  }
+
+  .calendarMonth {
+    font-size: 50px;
+  }
+
+  .calendarYear {
+    font-size: 30px;
+  }
+
+  /* .dayDateTitle {
+    font-size: 50px;
+  } */
+  
+  .dayNames {
+    font-size: 22px;
+  }
+
+  .dayNumbers {
+    font-size: 30px;
+  }
+
   .eventList {
     margin-left: 75px;
     margin-right: 75px;
@@ -365,7 +401,33 @@ font-family: 'Permanent Marker', cursive;
     font-size: 50px;
   }
 
-  .homepage p {
+  .homepage {
+    align-content: center;
+  }
+
+  .homepage p,
+  .homepage h3 {
+    font-size: 25px;
+  }
+
+  .homepageFilters {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);   
+    margin: auto;
+    width: 75%; 
+  }
+
+  .homepageFilters select {
+    font-size: 25px;
+  }
+
+  .notes button {
+    font-size: 15px;
+  }
+
+  .notes label,
+  .notesForm label,
+  .notesForm textarea {
     font-size: 23px;
   }
 

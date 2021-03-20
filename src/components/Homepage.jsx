@@ -59,10 +59,10 @@ function Homepage(props) {
       <p>Choose the month, number of days in that month, its start day and the year of the month you'd like to plan out.</p>
       
       <form onSubmit={handleSubmit}>
-        <div className="firstPairOfFilters">
+        <div className="homepageFilters">
+        {/* <div className="firstPairOfFilters"> */}
         <select defaultValue="Month"
           name='filter'
-          className="homepageFilters"
           id="monthFilter"
           onChange={(e) => setMonth(e.target.value)}>
             <option disabled value='Month'>Month</option>
@@ -75,7 +75,6 @@ function Homepage(props) {
 
         <select defaultValue="Number of days"
           name='filter'
-          className="homepageFilters"
           id="numberOfDaysFilter"
           onChange={(e) => setNumberOfDays(parseInt(e.target.value))}>
             <option disabled value='Number of days'>Number of days</option>
@@ -85,12 +84,11 @@ function Homepage(props) {
               )
             })}
         </select>
-        </div>
+        {/* </div> */}
 
-        <div className="secondPairOfFilters">
+        {/* <div className="secondPairOfFilters"> */}
         <select defaultValue="Start day" 
           name='filter'
-          className="homepageFilters"
           id="startDayFilter"
           onChange={(e) => setStartDay(e.target.value)}>
             <option disabled value='Start day'>Start day</option>
@@ -103,7 +101,6 @@ function Homepage(props) {
 
         <select defaultValue="Year" 
           name='filter'
-          className="homepageFilters"
           id="yearFilter"
           onChange={(e) => setYear(parseInt(e.target.value))}>
             <option disabled value='Year'>Year</option>
@@ -113,7 +110,8 @@ function Homepage(props) {
               )
             })}
         </select>
-            </div>
+          </div>
+          {/* </div> */}
         <div>
           {/* <Link to="/calendar"> */}
             <button type="submit">Create Calendar</button>

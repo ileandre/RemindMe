@@ -25,7 +25,7 @@ function Calendar(props) {
     d = 6
   }
 
-    for (let day = 1 - d; day <= numberOfDays; day++) {
+    for (let day = 1 - d; day <= 30; day++) {
         numOfDaysArr.push(<>
           <Days day={day} month={month} year={year} />
         </>)
