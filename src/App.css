@@ -176,17 +176,16 @@ font-size: 13px;
   border-radius: 8px;
 }
 
-.eventList h1 {
-  color:rgb(163, 225, 233);
-  font-family: 'Permanent Marker', cursive;
-}
-
 .events {
   margin-bottom: 50px;
 }
 
 .eventForm label {
   font-family: 'Pangolin', cursive;
+  color: rgb(224, 212, 212);
+  font-weight: bold;
+  font-family: 'Pangolin', cursive;
+  margin-left: 10px;
 }
 
 .eventsForm {
@@ -195,6 +194,12 @@ font-size: 13px;
 
 .eventsForm h3 {
   margin-top: 5px;
+}
+
+.dayDateTitle {
+  color:rgb(163, 225, 233);
+  font-family: 'Permanent Marker', cursive;
+  font-size: 25px;
 }
 
 .eventList h2,
@@ -261,7 +266,6 @@ font-size: 13px;
 
 .homeTitle span {
   font-size: 35px;
-  /* display: block; */
   display: inline;
 }
 
@@ -289,9 +293,10 @@ font-size: 13px;
 }
 
 .notes label {
-  margin: 5px;
+  margin: 10px;
   font-size: 15px;
   margin-top: 5px;
+  font-family: 'Pangolin', cursive;
 }
 
 .notesTitle {
@@ -317,6 +322,8 @@ font-family: 'Permanent Marker', cursive;
   margin-left: 10px;
   color: rgb(224, 212, 212);
   font-weight: bold;
+  font-family: 'Pangolin', cursive;
+
 }
 
 .notesForm textarea {
@@ -332,7 +339,39 @@ font-family: 'Permanent Marker', cursive;
 
 
 
-/*--------------------Media Query--------------------*/
+/*--------------------Media Query iPad--------------------*/
+
+@media (min-width: 768px) {
+
+  .dayDateTitle {
+    font-size: 50px;
+  }
+  
+  .eventList {
+    margin-left: 75px;
+    margin-right: 75px;
+  }
+
+  .eventList h2,
+  .eventsForm h3 {
+  font-size: 40px;
+  }
+
+  .homeTitle h1 {
+    font-size: 40px;
+  }
+
+  .homeTitle span {
+    font-size: 50px;
+  }
+
+  .homepage p {
+    font-size: 23px;
+  }
+
+}
+
+/*--------------------Media Query Desktop--------------------*/
 
 @media (min-width: 1024px) {
   

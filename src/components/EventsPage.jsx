@@ -15,7 +15,7 @@ function EventsPage(props) {
         </Link>
       </div>
       <div className="eventList">
-        <h1>{month} {day}, {year}</h1>
+        <p className="dayDateTitle">{month} {day}, {year}</p>
         <h2>Events</h2>
         {props.eventsInfo.map((event, index) => {
           if (event.fields.year === parseInt(year) && event.fields.month === month.toString()  && event.fields.day === parseInt(day)) {

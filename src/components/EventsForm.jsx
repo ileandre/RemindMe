@@ -9,9 +9,6 @@ function EventsForm(props) {
   const [description, setDescription] = useState("")
   // const params = useParams()
 
-  // console.log(props.day)
-  console.log(props.numberOfDays)
-  console.log(props.numberOfDaysArr)
 
   // useEffect(() => {
   //   if (params.id) {
