@@ -24,7 +24,7 @@ function NotesForm(props) {
     <div className="notesForm">
     <form onSubmit={handleSubmit}>
       <label>New Note: </label>
-      <textarea type="textarea" cols="40" rows="3" value={note} onChange={(e) => setNote(e.target.value)}/>  
+      <textarea type="textarea" value={note} onChange={(e) => setNote(e.target.value)}/>  
       <div className="notesFormButton">
         <button type="submit" >Add Note</button>
       </div>

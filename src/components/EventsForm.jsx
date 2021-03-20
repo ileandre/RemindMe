@@ -48,10 +48,11 @@ function EventsForm(props) {
       <label>Time: 
         <input required type="time" value={time} onChange={(e) => setTime(e.target.value)}/>
       </label>
-      <label>Description: 
-        <textarea required type="textarea" cols="40" rows="3" value={description} onChange={(e) => setDescription(e.target.value)}/>
-        </label>
-        <button type="submit">Add Event</button>
+      <label>Description: </label>
+        <textarea required type="textarea" value={description} onChange={(e) => setDescription(e.target.value)}/>
+        <div className="eventsFormButton">
+          <button type="submit">Add Event</button>
+        </div>
     </form>
     </div>
   )
