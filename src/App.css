@@ -148,7 +148,9 @@ select {
   text-align: left;
 }
 
-.eventForm input{
+.notesForm textarea,
+.eventForm input,
+.eventForm textarea{
   background-color: rgb(243, 242, 236);
 }
 
@@ -334,10 +336,6 @@ font-family: 'Permanent Marker', cursive;
 
 }
 
-.notesForm textarea {
-  background-color: rgb(243, 242, 236);
-}
-
 .remind {
   color:rgb(46, 177, 159);
   font-family: 'Permanent Marker', cursive;
@@ -393,7 +391,8 @@ font-family: 'Permanent Marker', cursive;
   font-size: 40px;
   }
 
-  .homeTitle h1 {
+  .homeTitle h1,
+  .dayDateTitle {
     font-size: 40px;
   }
 
@@ -427,7 +426,12 @@ font-family: 'Permanent Marker', cursive;
 
   .notes label,
   .notesForm label,
-  .notesForm textarea {
+  .notesForm textarea,
+  .eventForm label,
+  .eventForm input,
+  .eventForm textarea,
+  .eventInfo p,
+  .eventInfo span {
     font-size: 23px;
   }
 
