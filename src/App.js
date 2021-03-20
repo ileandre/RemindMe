@@ -25,9 +25,6 @@ function App() {
       setCalendarInfo(notesResp.data.records)
     }
     callAPI()
-    // console.log(calendarInfo)
-    // console.log(eventsInfo)
-    // setNumOfDaysArr([])
   }, [toggleFetch])
 
   useEffect(() => {
@@ -36,15 +33,7 @@ function App() {
       setEventsInfo(eventsResp.data.records)
     }
     callAPI()
-    // console.log(calendarInfo)
-    // console.log(eventsInfo)
-    // setNumOfDaysArr([])
   }, [eventToggleFetch])
-
-
-  // console.log(numberOfDays)
-  // console.log(month)
-  // console.log(year)
 
   return (
     <div className="App">

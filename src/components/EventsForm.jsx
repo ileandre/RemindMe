@@ -41,10 +41,6 @@ function EventsForm(props) {
     setTime("")
     setDescription("")
   }
-  
-
-  console.log("You're in the EventsForm component")
-
 
   return (
     <div className="eventForm">

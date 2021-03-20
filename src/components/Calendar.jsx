@@ -8,16 +8,8 @@ function Calendar(props) {
   const { month, numberOfDays, year, startDay} = props
   const numOfDaysArr = []
   const daysArr = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
-const history = useHistory()
-  // setToggleFetch((curr) => !curr)
-  // console.log(numberOfDays)
+  const history = useHistory()
 
-
-
-  // useEffect(() => {
-  //   if()
-  // },[])
-  //numberOfDays
   let d = 0
   if (startDay === "Monday") {
     d = 1
@@ -38,8 +30,6 @@ const history = useHistory()
           <Days day={day} month={month} year={year} />
         </>)
       }
-
-  console.log(numOfDaysArr)
 
   // if (numberOfDays === 0) {
   //   history.push("/")

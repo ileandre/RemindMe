@@ -8,14 +8,10 @@ function Events(props) {
 
   const erase = async() => {
     const eraseEventURL = `${eventsBaseURL}/${props.event.id}`
-    console.log(props.event.id)
-    console.log(eraseEventURL)
     await axios.delete(eraseEventURL, config)
     props.setEventToggleFetch((curr) => !curr)
     // history.push("/calendar")
   }
-  console.log(props.numberOfDays)
-  console.log(props.numberOfDaysArr)
 
   return (
     <div className="events">

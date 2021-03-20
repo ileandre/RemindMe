@@ -24,8 +24,7 @@ function Homepage(props) {
   
   const handleSubmit = async (e) => {
     e.preventDefault()
-    // console.log(numberOfDays)
-    // console.log(year)
+
     if (month !== "Month" && numberOfDays
       !== "Number of days" && startDay
       !== "Start day" && year !== 0) {
@@ -36,7 +35,6 @@ function Homepage(props) {
         startDay,
         year,
       }
-      console.log(newCalendarInfo)
       await axios.post(notesBaseURL,{fields: newCalendarInfo}, config)
     } else {
       <h2>"Please fill in ALL the fields."</h2>

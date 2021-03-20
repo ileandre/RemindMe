@@ -5,8 +5,6 @@ function NotesList(props) {
 
   const erase = async() => {
     const eraseNoteURL = `${notesBaseURL}/${props.note.id}`
-    console.log(props.note.id)
-    console.log(eraseNoteURL)
     await axios.delete(eraseNoteURL, config)
     props.setToggleFetch((curr) => !curr)
   }
