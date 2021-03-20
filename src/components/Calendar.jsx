@@ -41,9 +41,9 @@ const history = useHistory()
 
   console.log(numOfDaysArr)
 
-  if (numberOfDays === 0) {
-    history.push("/")
-  }
+  // if (numberOfDays === 0) {
+  //   history.push("/")
+  // }
 
   return(
     <div className="calendarPage">
@@ -53,7 +53,7 @@ const history = useHistory()
             <button>Home</button>
           </Link>
         </div>
-          <div>RemindMe</div>
+          <div><span className="remind">Remind</span><span className="me">Me</span></div>
       </nav>
       <h1 className="calendarMonth">{month} </h1>
       <p className="calendarYear">{year}</p>

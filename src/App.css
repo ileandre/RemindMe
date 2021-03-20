@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 /* font-family: 'Permanent Marker', cursive; */
 @import url('https://fonts.googleapis.com/css2?family=Pangolin&family=Permanent+Marker&display=swap');
-/* font-family: 'Pangolin', cursive;
-font-family: 'Permanent Marker', cursive; */
+/* font-family: 'Pangolin', cursive;*/
 
 /* * {
   box-sizing: border-box; 
@@ -11,11 +10,21 @@ font-family: 'Permanent Marker', cursive; */
 
 /*--------------------TAGS--------------------*/
 
+button {
+  font-size: 15px;
+  padding: 5px;
+  background-color:rgb(8, 12, 73);
+  color: white;
+  font-family: 'Pangolin', cursive;
+  border-radius: 6px;
+}
+
 select {
   margin-left: 10px;
   margin-bottom: 10px;
   font-size: 17px;
 }
+
 
 /*--------------------CLASS--------------------*/
 
@@ -48,6 +57,7 @@ select {
   padding-bottom: 0px;
   display: grid;
   border: black solid 1px;
+  color:rgb(119, 46, 46);
   /* grid-template-columns: repeat(4, 1fr); */
   /* grid-template-areas: 
   "W W W D D"
@@ -67,7 +77,8 @@ select {
   margin-bottom: 0px;
   margin-top: 0px;
   border-width: 1px;
-}
+  font-family: 'Permanent Marker', cursive;
+  color: rgb(8, 12, 73);}
 
 .calendarNav {
   display: flex;
@@ -77,13 +88,16 @@ select {
 }
 
 .calendarPage {
-  background-color:rgb(179, 175, 174);
+  background-color:rgb(214, 237, 240);
   padding-bottom: 5px;
 }
 
 .calendarYear {
   margin-top: 0px;
   margin-bottom: 3px;
+  font-family: 'Pangolin', cursive;
+  color:rgb(29, 71, 160);
+  font-weight: 5px;
 }
 
 .dayNames {
@@ -91,6 +105,13 @@ select {
   font-weight: bold;
   border-bottom: black solid 2px;
   border-left: black solid 1px;
+  background-color:rgb(13, 70, 104);
+  color: rgb(226, 214, 202);
+  font-family: 'Pangolin', cursive;
+}
+
+.dayNumbers {
+  color: rgb(8, 12, 73);
 }
 
 .days {
@@ -127,6 +148,10 @@ select {
   text-align: left;
 }
 
+.eventForm input{
+  background-color: rgb(243, 242, 236);
+}
+
 .eventInfo p {
 margin-bottom: 5px;
 margin-top: 5px;
@@ -139,11 +164,43 @@ font-size: 13px;
   font-size: 15px;
 }
 
+.eventInfo {
+  font-family: 'Pangolin', cursive;
+  margin-left: 10px;
+}
+
 .eventList {
   margin: 10px;
   margin: black solid 2px;
-  background-color:rgb(107, 73, 10);
+  background-color:rgb(26, 87, 136);
   border-radius: 8px;
+}
+
+.eventList h1 {
+  color:rgb(163, 225, 233);
+  font-family: 'Permanent Marker', cursive;
+}
+
+.events {
+  margin-bottom: 50px;
+}
+
+.eventForm label {
+  font-family: 'Pangolin', cursive;
+}
+
+.eventsForm {
+  border-top: black solid 1px;
+}
+
+.eventsForm h3 {
+  margin-top: 5px;
+}
+
+.eventList h2,
+.eventsForm h3 {
+  color:rgb(214, 237, 240);
+  font-family: 'Pangolin', cursive;
 }
 
 .eventNav {
@@ -154,6 +211,7 @@ font-size: 13px;
 
 .eventPage {
   justify-content: center;
+  /* background-color:rgb(214, 237, 240); */
 }
 
 .events {
@@ -162,28 +220,22 @@ font-size: 13px;
   margin: 10px;
   padding-top: 10px 10px;
   text-align: left;
-  background-color: white;
+  background-color: rgb(243, 242, 236);
   border-radius: 4px;
 }
 
 .homepage {
-  background-color:rgb(179, 175, 174);
+  background-color:rgb(214, 237, 240);
   margin-bottom: 0px;
 }
 
 .homepage button {
   margin-top: 35px; 
   margin-bottom: 5px;
-  border-radius: 4px;
-  font-size: 15px;
-  padding: 5px;
-  background-color:rgb(172, 102, 102);
-  color: white;
-  font-family: 'Pangolin', cursive;
 }
 
 .homepage p {
-  color:rgb(104, 78, 52);
+  color:rgb(8, 12, 73);
   font-family: 'Pangolin', cursive;
 }
 
@@ -193,9 +245,10 @@ font-size: 13px;
 }
 
 .homepageFilters {
-  background-color:rgb(226, 214, 202);
+  background-color:rgb(195, 221, 223);
   font-family: 'Pangolin', cursive;
   border-radius: 4px;
+  color:rgb(8, 12, 73);
 }
 
 .homeTitle h1 {
@@ -203,18 +256,18 @@ font-size: 13px;
   font-family: 'Pangolin', cursive;
   margin: 40px 40px;
   margin-bottom: 0px;
-  color:rgb(104, 78, 52);
+  color:rgb(8, 12, 73);
 }
 
 .homeTitle span {
   font-size: 35px;
   /* display: block; */
-  font-family: 'Permanent Marker', cursive;
   display: inline;
 }
 
 .me {
-  color:rgb(151, 113, 76)
+  color:rgb(197, 162, 48);
+  font-family: 'Permanent Marker', cursive;
 }
 
 .notes {
@@ -223,7 +276,7 @@ font-size: 13px;
   margin: 10px;
   padding-top: 10px 10px;
   text-align: left;
-  background-color: white;
+  background-color: rgb(243, 242, 236);
   border-radius: 4px;
 }
 
@@ -244,12 +297,14 @@ font-size: 13px;
 .notesTitle {
 margin-bottom: 5px;
 border-bottom: black solid 1px;
+color: white;
+font-family: 'Permanent Marker', cursive;
 }
 
 .notesList {
   margin-top: 10px;
-  margin: rgb(99, 65, 3) solid 1px;
-  background-color:rgb(107, 73, 10);
+  margin: rgb(8, 12, 73) solid 1px;
+  background-color:rgb(26, 87, 136);
 }
 
 .notesFormButton {
@@ -264,8 +319,13 @@ border-bottom: black solid 1px;
   font-weight: bold;
 }
 
+.notesForm textarea {
+  background-color: rgb(243, 242, 236);
+}
+
 .remind {
-  color:rgb(172, 102, 102);
+  color:rgb(46, 177, 159);
+  font-family: 'Permanent Marker', cursive;
   }
 
 /*--------------------IDs--------------------*/
