@@ -8,58 +8,106 @@ function EventsPage(props) {
   const { year, month, day } = params
 
   let arr = []
+  let eArray = []
+  let orderedArray = []
+
   const toInteger = () => {
     
     for (let i = 0; i < props.eventsInfo.length; i++) {
       let event = props.eventsInfo[i]
       if (event.fields.year === parseInt(year) && event.fields.month === month.toString() && event.fields.day === parseInt(day)) {
-        console.log(event.fields.time)
+        // console.log(event.fields.time)
         let time = event.fields.time.split(":")
-        console.log(time)
+        // console.log(time)
         let num = time.join("")
-        console.log(num)
+        // console.log(num)
 
-        // event.fields.time = num
-        console.log(event.fields.time)
+        event.fields.time = num
+        // console.log(event.fields.time)
         
         arr.push(num)
-        console.log(event)
+        eArray.push(props.eventsInfo[i])
+
+        console.log(num)
+        console.log(props.eventsInfo[i])
         // parseInt(event.time)
       }
     }
 
   }
-    toInteger()
+  toInteger()
 
-    const inOrder = () => {
-      console.log(arr)
+  const inOrder = () => {
+    // console.log(arr)
 
-      arr.sort(function (a, b) { return a - b })
-      for (let i = 0; i < arr.length; i++) {
-        let array = []
-        console.log(arr[i])
-        if (arr[i] < 1200) {
-          array = [...arr[i].split("")]
-          console.log(array)
-          array.splice(2, 0, ":")
-          array.push(" am")
-          arr[i] = array.join("")
-          // time = array.join("").toString()
-          console.log(arr[i])
-        } else if (arr[i] > 1159) {
-          let temp
-          if (arr[i] > 1259) { temp = arr[i] - 1200 }
-          console.log(temp)
-          array = [...temp.toString().split("")]
-          console.log(array)
-          if (arr[i] > 1159) {array.splice(0,0,"0")}
-          array.splice(2, 0, ":")
-          array.push(" pm")
-          arr[i] = array.join("")
-        } 
-        // time.join
+    arr.sort(function (a, b) { return a - b })
+    console.log(arr)
+
+    arr.forEach((time) => {
+      for (let i = 0; i < eArray.length; i++) {
+        console.log(eArray[i])
+        if (time === eArray[i].fields.time) {
+          let array = []
+          console.log(time)
+          console.log(eArray[i].fields.time)
+          if (time < 1200) {
+            array = [...time.split("")]
+            console.log(array)
+            array.splice(2, 0, ":")
+            array.push(" am")
+            eArray[i].fields.time = array.join("")
+            // time = array.join("").toString()
+            // console.log(time)
+          } else if (time > 1159) {
+            let temp
+            if (time > 1259) { temp = time - 1200 }
+            console.log(temp)
+            array = [...temp.toString().split("")]
+            console.log(array)
+            if (time > 1159) { array.splice(0, 0, "0") }
+            console.log(array)
+            array.splice(2, 0, ":")
+            console.log(array)
+            array.push(" pm")
+            array = [...array]
+            console.log(array)
+            time = array.join("")
+            console.log(time)
+            // eArray[i].fields.time = array.join("")
+            eArray[i].fields.time = time.toString()
+            console.log(eArray[i])
+            orderedArray.push(eArray[i])
+          }
+        }
       }
-console.log(arr)
+    })
+  }
+  inOrder()
+      // for (let i = 0; i < arr.length; i++) {
+        // let array = []
+        // // console.log(arr[i])
+        // if (time < 1200) {
+        //   array = [...time.split("")]
+        //   // console.log(array)
+        //   array.splice(2, 0, ":")
+        //   array.push(" am")
+        //   time = array.join("")
+        //   // time = array.join("").toString()
+        //   // console.log(arr[i])
+        // } else if (time > 1159) {
+        //   let temp
+        //   if (time > 1259) { temp = time - 1200 }
+        //   // console.log(temp)
+        //   array = [...temp.toString().split("")]
+        //   // console.log(array)
+        //   if (time > 1159) {array.splice(0,0,"0")}
+        //   array.splice(2, 0, ":")
+        //   array.push(" pm")
+        //   event.fields.time = array.join("")
+        // } 
+        // time.join
+      // }
+// console.log(arr)
         // return (
         //   <Events
         //     key={index}
@@ -70,9 +118,8 @@ console.log(arr)
         //     numberOfDays={props.numberOfDays}
         //   />
         // )
-    }
   
-  inOrder()
+  
 
   return (
     <div className="eventPage">
@@ -84,8 +131,7 @@ console.log(arr)
       <div className="eventList">
         <p className="dayDateTitle">{month} {day}, {year}</p>
         <h2>Events</h2>
-        {arr.map((time, index) => {
-          const event = props.eventsInfo.find((event) => event.fields.time === time)
+        {eArray.map((event, index) => {
           return (
             <Events
               key={index}
