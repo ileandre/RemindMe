@@ -36,15 +36,27 @@ function EventsPage(props) {
 
       arr.sort(function (a, b) { return a - b })
       for (let i = 0; i < arr.length; i++) {
-        // arr[i]
-        // console.log(time[2])
-        // time = time.toString()
-        let array = [arr[i].split("")]
-        console.log(array)
-        array[0].splice(2, 0, ":")
-        arr[i] = array[0].join("")
-        // time = array.join("").toString()
+        let array = []
         console.log(arr[i])
+        if (arr[i] < 1200) {
+          array = [...arr[i].split("")]
+          console.log(array)
+          array.splice(2, 0, ":")
+          array.push(" am")
+          arr[i] = array.join("")
+          // time = array.join("").toString()
+          console.log(arr[i])
+        } else if (arr[i] > 1159) {
+          let temp
+          if (arr[i] > 1259) { temp = arr[i] - 1200 }
+          console.log(temp)
+          array = [...temp.toString().split("")]
+          console.log(array)
+          if (arr[i] > 1159) {array.splice(0,0,"0")}
+          array.splice(2, 0, ":")
+          array.push(" pm")
+          arr[i] = array.join("")
+        } 
         // time.join
       }
 console.log(arr)
