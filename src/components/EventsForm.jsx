@@ -67,6 +67,9 @@ function EventsForm(props) {
     setTitle("")
     setTime("")
     setDescription("")
+    timeHours("")
+    timeMinutes("")
+    timeUnits("")
   }
 
   return (
