@@ -34,9 +34,10 @@ function Homepage(props) {
   const history = useHistory();
   const [error, setError] = useState("");
 
-  for (let year = 2021; year <= 2121; year++) yearsArr.push(year);
 
-  const handleSubmit = async (e) => {
+  for (let year = 2021; year <= 2121; year++) yearsArr.push(year);  //this creates an array of all the years from 2021 to 2121
+
+  const handleSubmit = async (e) => {                               //this takes in the users inputs and stores it in the api
     e.preventDefault();
     const newCalendarInfo = {
       month,
@@ -48,7 +49,7 @@ function Homepage(props) {
     await axios.post(notesBaseURL, { fields: newCalendarInfo }, config);
     props.setToggleFetch((curr) => !curr);
 
-    if (
+    if (                                                           //checks if all the filters were chosen. If not, then you get an error message
       month === "Month" ||
       numberOfDays === 0 ||
       startDay === "Start day" ||
@@ -56,7 +57,7 @@ function Homepage(props) {
     ) {
       setError("ERROR! You must select all the options.");
     } else {
-      history.push("/calendar");
+      history.push("/calendar");                                    //the calendar route mounted to the screen after everything in the api is updated
     }
   };
 
@@ -72,7 +73,7 @@ function Homepage(props) {
         year you'd like to plan out.
       </p>
 
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>                                {/* all the arrays are mapped out to create the filters the user will use to create their calendar */}
         <div className="homepageFilters">
           <select
             defaultValue="Month"

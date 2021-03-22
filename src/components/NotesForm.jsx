@@ -6,7 +6,7 @@ function NotesForm(props) {
   const [note, setNote] = useState("");
   const { month, numberOfDays, startDay, year } = props;
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e) => {                                   
     e.preventDefault();
     const newNote = {
       month,

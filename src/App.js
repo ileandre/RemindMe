@@ -17,7 +17,7 @@ function App() {
   const [startDay, setStartDay] = useState("Start day");
   const [year, setYear] = useState(0);
 
-  useEffect(() => {
+  useEffect(() => {                                                       //the notes table of the api is called to access information and any updated information
     const callAPI = async () => {
       const notesResp = await axios.get(notesBaseURL, config);
       setCalendarInfo(notesResp.data.records);
@@ -25,7 +25,7 @@ function App() {
     callAPI();
   }, [toggleFetch]);
 
-  useEffect(() => {
+  useEffect(() => {                                                       //the events table of the api is called to access information and any updated information
     const callAPI = async () => {
       const eventsResp = await axios.get(eventsBaseURL, config);
       setEventsInfo(eventsResp.data.records);
@@ -33,10 +33,10 @@ function App() {
     callAPI();
   }, [eventToggleFetch]);
 
-  return (
-    <div className="App">
-      <Route exact path="/">
-        <Homepage
+  return (                                                                
+    <div className="App">                                                 
+      <Route exact path="/">                                                {/* homepage renders in the home route and takes in the getters and setters so it can update the notes table */}
+        <Homepage                                                         
           setToggleFetch={setToggleFetch}
           setMonth={setMonth}
           month={month}
@@ -49,7 +49,7 @@ function App() {
         />
       </Route>
 
-      <Route path="/calendar">
+      <Route path="/calendar">                                             {/* calendar is rendered in the calendar route and takes in the numberOfDays information other calendar features */}
         <Calendar
           calendarInfo={calendarInfo}
           eventsInfo={eventsInfo}
@@ -61,8 +61,8 @@ function App() {
         />
       </Route>
 
-      <Route path="/events/:year/:month/:day/">
-        <EventsPage
+      <Route path="/events/:year/:month/:day/">                             {/* the eventspage is renders in the events route that has params of the year, day and month to identify specific information from specific days */}
+        <EventsPage                                                       
           eventsInfo={eventsInfo}
           setEventToggleFetch={setEventToggleFetch}
           setNumberOfDays={setNumberOfDays}

@@ -18,7 +18,7 @@ function Calendar(props) {
   const history = useHistory();
 
   let d = 0;
-  if (startDay === "Monday") {
+  if (startDay === "Monday") {                                               //This moves the start of the daynumber divs so they start at the correct start day
     d = 1;
   } else if (startDay === "Tuesday") {
     d = 2;
@@ -32,7 +32,7 @@ function Calendar(props) {
     d = 6;
   }
 
-  for (let day = 1 - d; day <= numberOfDays; day++) {
+  for (let day = 1 - d; day <= numberOfDays; day++) {                         //pushes the day component with its distinct number to an array
     numOfDaysArr.push(
       <>
         <Days day={day} month={month} year={year} numberOfDays={numberOfDays} />
@@ -61,18 +61,18 @@ function Calendar(props) {
       <p className="calendarYear">{year}</p>
       <div className="calendarBoard">
         <div className="calendar">
-          {daysArr.map((day, index) => {
+          {daysArr.map((day, index) => {                            {/* This rendereds the day names to the calendar*/}
             return (
               <div key={index} className="dayNames">
                 {day.toString()}
               </div>
             );
           })}
-          {numOfDaysArr}
+          {numOfDaysArr}                                            {/*The numOfDaysArr is rendered to the calendar */}
         </div>
         <div className="notesList">
           <h1 className="notesTitle">Notes </h1>
-          {props.calendarInfo.map((note, index) => {
+          {props.calendarInfo.map((note, index) => {                {/* Checks if the individual notes have the matching year and month as the month you're in, then renders the note to your screen */}
             return note.fields.note &&
               note.fields.year === parseInt(year) &&
               note.fields.month === month.toString() ? (
@@ -83,8 +83,8 @@ function Calendar(props) {
               />
             ) : null;
           })}
-
-          <NotesForm
+                                                                    {/* The line below Renders the notes form to the page */}
+          <NotesForm                                                
             key={props.eventsInfo.id}
             month={month}
             year={year}
