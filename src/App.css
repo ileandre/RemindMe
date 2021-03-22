@@ -307,7 +307,6 @@ select {
 
 .notesTitle {
   margin-bottom: 5px;
-  border-bottom: black solid 1px;
   color: white;
   font-family: "Permanent Marker", cursive;
 }
@@ -315,13 +314,13 @@ select {
 .notesList {
   margin: rgb(8, 12, 73) solid 1px;
   background-color: rgb(26, 87, 136);
-  background-image: url("https://cdn.dribbble.com/users/2437/screenshots/1671078/iphoto_corkboard.png?compress=1&resize=400x300")
-
+  background-image: url("https://cdn.dribbble.com/users/2437/screenshots/1671078/iphoto_corkboard.png?compress=1&resize=400x300");
+  box-sizing: border-box;
+  border: black solid 2px;
 }
 
 .notesForm {
-  border-top: black solid 1px;
-  margin-top: 30px;
+  margin-top: 10px;
   padding-top: 10px;
 }
 
@@ -453,8 +452,6 @@ select {
   .calendarBoard {
     display: grid;
     grid-template-columns: 3fr 1fr;
-    box-sizing: border-box;
-    border: black solid 2px;
   }
 
   .daysNumbers {
