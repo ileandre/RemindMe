@@ -13,10 +13,8 @@ function EventsForm(props) {
   const timeUnitsArr = [" am", " pm"];
   const [error, setError] = useState("");
 
-  for (let hour = 1; hour <= 12; hour++) {                          //The for loops below change the integers to strings with 0 in the beginning of the 1 digit hours and minutes, then pushes the numbers to arrays that hold the hur and minute values
+  for (let hour = 1; hour <= 12; hour++) {                          //This loop changes the integers to strings with 0 in the beginning of the 1 digit minutes, then pushes the numbers to arrays that hold the hur and minute values
     if (hour < 10) {
-      hour = `0${hour}`;
-    } else {
       hour = `${hour}`;
     }
     timeHoursArr.push(hour);
@@ -31,7 +29,6 @@ function EventsForm(props) {
 
   const handleSubmit = async (e) => {                                //accesses the events table in the API to add new events
     e.preventDefault();
-
     const newEvent = {
       title,
       timeHours,
@@ -55,9 +52,9 @@ function EventsForm(props) {
     props.setEventToggleFetch((curr) => !curr);
     setTitle("");
     setDescription("");
-    setTimeHours("");
-    setTimeMinutes("");
-    setTimeUnits("");
+    setTimeHours();
+    setTimeMinutes();
+    setTimeUnits();
   };
 
   return (

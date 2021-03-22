@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 function Days(props) {
-  const { month, year, day } = props;
+  const { month, year, day} = props;
 
   let num;
   if (day < 1) {
