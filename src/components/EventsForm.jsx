@@ -52,9 +52,6 @@ function EventsForm(props) {
     props.setEventToggleFetch((curr) => !curr);
     setTitle("");
     setDescription("");
-    setTimeHours();
-    setTimeMinutes();
-    setTimeUnits();
   };
 
   return (
