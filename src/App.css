@@ -231,10 +231,6 @@ select {
   border-radius: 4px;
 }
 
-.hasEvent {
-  background-color: yellow;
-}
-
 .homepage {
   background-color: rgb(214, 237, 240);
   margin-bottom: 0px;
@@ -328,7 +324,7 @@ select {
   display: block;
   text-align: left;
   margin-left: 10px;
-  color: rgb(224, 212, 212);
+  color: rgb(4, 12, 82);
   font-weight: bold;
   font-family: "Pangolin", cursive;
 }
