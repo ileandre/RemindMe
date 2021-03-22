@@ -51,16 +51,9 @@ function EventsForm(props) {
   console.log(timeMinutesArr)
 
   const handleSubmit = async (e) => {
-    console.log(timeHours,timeMinutes,timeUnits)
     e.preventDefault()
-    let temp2 = timeMinutes.concat(timeUnits)
-    console.log(temp2)
-    let temp = (timeHours.concat(temp2))
-    console.log(temp)
-    setTime(temp)
     const newEvent = {
       title,
-      // time,
       timeHours,
       timeMinutes,
       timeUnits,
@@ -85,7 +78,7 @@ function EventsForm(props) {
       <label>Time: 
         {/* <input required type="time" value={time} onChange={(e) => setTime(e.target.value)}/> */}
           
-        <select defaultValue="00" 
+        <select defaultValue="Hours" 
           name='filter'
           id="hourFilter"
           onChange={(e) => setTimeHours(e.target.value)}>
@@ -97,7 +90,7 @@ function EventsForm(props) {
             })}
           </select>
           
-          <select defaultValue="00" 
+          <select defaultValue="Minutes" 
           name='filter'
           id="minuteFilter"
           onChange={(e) => setTimeMinutes(e.target.value)}>
@@ -109,7 +102,7 @@ function EventsForm(props) {
             })}
           </select>
           
-          <select defaultValue="units" 
+          <select defaultValue="Units" 
           name='filter'
           id="unitsFilter"
           onChange={(e) => setTimeUnits(e.target.value)}>
