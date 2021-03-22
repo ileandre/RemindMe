@@ -7,6 +7,12 @@ function EventsForm(props) {
   const [title, setTitle] = useState("")
   const [time, setTime] = useState("")
   const [description, setDescription] = useState("")
+  const [timeHours, setTimeHours] = useState("")
+  const [timeMinutes, setTimeMinutes] = useState("")
+  const [timeUnits, setTimeUnits] = useState("")
+  const timeHoursArr = []
+  const timeMinutesArr = []
+  const timeUnitsArr = [" am", " pm"]
   // const params = useParams()
 
 
@@ -22,11 +28,42 @@ function EventsForm(props) {
   //   }
   // },[props.eventInfo, params.id])
 
-  const handleSubmit = async(e) => {
+  for (let hour = 1; hour <= 12; hour++) {
+    
+    if (hour < 10) {
+      hour = `0${hour}`
+    }
+    else {
+      hour = `${hour}`
+    }
+    timeHoursArr.push(hour)
+}
+  console.log(timeHoursArr)
+
+  for (let min = 1; min < 60; min++) {
+
+    if (min < 10) {
+      min = `0${min}`
+    }
+    timeMinutesArr.push(`:${min}`)
+
+  }
+  console.log(timeMinutesArr)
+
+  const handleSubmit = async (e) => {
+    console.log(timeHours,timeMinutes,timeUnits)
     e.preventDefault()
+    let temp2 = timeMinutes.concat(timeUnits)
+    console.log(temp2)
+    let temp = (timeHours.concat(temp2))
+    console.log(temp)
+    setTime(temp)
     const newEvent = {
       title,
-      time,
+      // time,
+      timeHours,
+      timeMinutes,
+      timeUnits,
       description,
       month: props.month,
       day: parseInt(props.day),
@@ -46,7 +83,44 @@ function EventsForm(props) {
         <input required type="text" value={title} onChange={(e) => setTitle(e.target.value)}/>
       </label>
       <label>Time: 
-        <input required type="time" value={time} onChange={(e) => setTime(e.target.value)}/>
+        {/* <input required type="time" value={time} onChange={(e) => setTime(e.target.value)}/> */}
+          
+        <select defaultValue="00" 
+          name='filter'
+          id="hourFilter"
+          onChange={(e) => setTimeHours(e.target.value)}>
+            <option disabled value='Hours'>Hours</option>
+            {timeHoursArr.map((hour, index) => {
+              return (
+                <option key={index} value={hour}>{hour}</option>
+              )
+            })}
+          </select>
+          
+          <select defaultValue="00" 
+          name='filter'
+          id="minuteFilter"
+          onChange={(e) => setTimeMinutes(e.target.value)}>
+            <option disabled value='Minutes'>Minutes</option>
+            {timeMinutesArr.map((min, index) => {
+              return (
+                <option key={index} value={min}>{min}</option>
+              )
+            })}
+          </select>
+          
+          <select defaultValue="units" 
+          name='filter'
+          id="unitsFilter"
+          onChange={(e) => setTimeUnits(e.target.value)}>
+            <option disabled value='Units'>Units</option>
+            {timeUnitsArr.map((unit, index) => {
+              return (
+                <option key={index} value={unit}>{unit}</option>
+              )
+            })}
+          </select>
+
       </label>
       <label>Description: </label>
         <textarea required type="textarea" value={description} onChange={(e) => setDescription(e.target.value)}/>

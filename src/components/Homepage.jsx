@@ -56,7 +56,7 @@ function Homepage(props) {
         <h1>Welcome to</h1>
         <span className="remind">Remind</span><span className="me">Me</span>
       </div>
-      <p>Choose the month, number of days in that month, its start day and the year of the month you'd like to plan out.</p>
+      <p>Choose the month, number of days in that month, its start day and the year you'd like to plan out.</p>
       
       <form onSubmit={handleSubmit}>
         <div className="homepageFilters">

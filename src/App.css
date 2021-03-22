@@ -172,7 +172,9 @@ font-size: 13px;
 }
 
 .eventList {
-  margin: 10px;
+  /* margin: 10px; */
+  margin-left: 5%;
+  margin-right: 5%;
   margin: black solid 2px;
   background-color:rgb(26, 87, 136);
   border-radius: 8px;
@@ -325,7 +327,6 @@ font-family: 'Permanent Marker', cursive;
 }
 
 .notesList {
-  margin-top: 10px;
   margin: rgb(8, 12, 73) solid 1px;
   background-color:rgb(26, 87, 136);
 }
@@ -392,8 +393,8 @@ font-family: 'Permanent Marker', cursive;
   }
 
   .eventList {
-    margin-left: 75px;
-    margin-right: 75px;
+    margin-left: 10%;
+    margin-right: 10%;
     padding-bottom: 20px;
   }
 
@@ -489,6 +490,11 @@ font-family: 'Permanent Marker', cursive;
 
   .daysSpaces {
     grid-area: W;
+  }
+
+  .eventList {
+    margin-left: 25%;
+    margin-right: 25%;
   }
 
 }
