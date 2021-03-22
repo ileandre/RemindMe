@@ -1,7 +1,5 @@
 import Calendar from "./components/Calendar"
-// import DayAgenda from "./components/DayAgenda"
 import EventsPage from "./components/EventsPage"
-// import EventsForm from "./components/EventsForm"
 import Homepage from "./components/Homepage"
 import { useEffect, useState } from "react"
 import {notesBaseURL, eventsBaseURL, config} from "./services"
@@ -72,15 +70,6 @@ function App() {
           numberOfDays={numberOfDays}
         />
       </Route>
-
-      {/* <Route path="/events/:year/:month/:day/:id">
-        <EventsPage
-          eventsInfo={eventsInfo}
-          setEventToggleFetch={setEventToggleFetch}
-          setNumberOfDays={setNumberOfDays}
-          numberOfDays={numberOfDays}
-        />
-      </Route> */}
 
     </div>
   );

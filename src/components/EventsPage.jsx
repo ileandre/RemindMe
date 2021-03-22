@@ -17,14 +17,10 @@ function EventsPage(props) {
     for (let i = 0; i < props.eventsInfo.length; i++) {
       let event = props.eventsInfo[i]
       if (event.fields.time && event.fields.year === parseInt(year) && event.fields.month === month.toString() && event.fields.day === parseInt(day)) {
-        // console.log(event.fields.time)
         let time = event.fields.time.split(":")
-        // console.log(time)
         let num = time.join("")
-        // console.log(num)
 
         event.fields.tempTime = num
-        // console.log(event.fields.time)
         
         if (num.includes("am")) { arrAM.push(num) }
         if (num.includes("pm")) { arrPM.push(num) }
@@ -33,10 +29,8 @@ function EventsPage(props) {
 
         console.log(num)
         console.log(props.eventsInfo[i])
-        // parseInt(event.time)
       }
     }
-
   }
   toInteger()
 
@@ -68,46 +62,7 @@ function EventsPage(props) {
       }
     })
   }
-  console.log(orderedArray)
   inOrder()
-
-      // for (let i = 0; i < arr.length; i++) {
-        // let array = []
-        // // console.log(arr[i])
-        // if (time < 1200) {
-        //   array = [...time.split("")]
-        //   // console.log(array)
-        //   array.splice(2, 0, ":")
-        //   array.push(" am")
-        //   time = array.join("")
-        //   // time = array.join("").toString()
-        //   // console.log(arr[i])
-        // } else if (time > 1159) {
-        //   let temp
-        //   if (time > 1259) { temp = time - 1200 }
-        //   // console.log(temp)
-        //   array = [...temp.toString().split("")]
-        //   // console.log(array)
-        //   if (time > 1159) {array.splice(0,0,"0")}
-        //   array.splice(2, 0, ":")
-        //   array.push(" pm")
-        //   event.fields.time = array.join("")
-        // } 
-        // time.join
-      // }
-// console.log(arr)
-        // return (
-        //   <Events
-        //     key={index}
-        //     event={event}
-        //     eventsInfo={props.eventsInfo}
-        //     setEventToggleFetch={props.setEventToggleFetch}
-        //     setNumberOfDays={props.setNumberOfDays}
-        //     numberOfDays={props.numberOfDays}
-        //   />
-        // )
-  
-  
 
   return (
     <div className="eventPage">

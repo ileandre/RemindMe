@@ -1,9 +1,6 @@
 import axios from 'axios'
 import {eventsBaseURL, config} from "../services"
 import { useState } from 'react'
-// import { useHistory } from "react-router-dom"
-
-// import { useParams } from 'react-router-dom'
 
 function EventsForm(props) {
   const [title, setTitle] = useState("")
@@ -16,22 +13,6 @@ function EventsForm(props) {
   const timeMinutesArr = []
   const timeUnitsArr = [" am", " pm"]
   const [error, setError] = useState("")
-  // const history = useHistory()
-  // const { day, month, year } = props
-  // const params = useParams()
-
-
-  // useEffect(() => {
-  //   if (params.id) {
-  //     const editEvent = props.eventsInfo.find((event) => event.id === params.id)
-  //     console.log(params.id)
-  //     if (editEvent) {
-  //       setTitle(editEvent.fields.title)
-  //       setTime(editEvent.fields.time)
-  //       setDescription(editEvent.fields.description)
-  //     }
-  //   }
-  // },[props.eventInfo, params.id])
 
   for (let hour = 1; hour <= 12; hour++) {
     
@@ -43,7 +24,6 @@ function EventsForm(props) {
     }
     timeHoursArr.push(hour)
 }
-  // console.log(timeHoursArr)
 
   for (let min = 1; min < 60; min++) {
 
@@ -53,7 +33,6 @@ function EventsForm(props) {
     timeMinutesArr.push(`:${min}`)
 
   }
-  // console.log(timeMinutesArr)
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -72,8 +51,6 @@ function EventsForm(props) {
 
     if (timeHours === "Hours" || timeMinutes === "Minutes" || timeUnits === "Units") {
       setError("ERROR! You must select all the options for 'Time'.")
-    // } else {
-    //   history(`/events/${year}/${month}/${day}`)
     }
 
     props.setEventToggleFetch((curr) => !curr)
@@ -92,7 +69,6 @@ function EventsForm(props) {
         <input required type="text" value={title} onChange={(e) => setTitle(e.target.value)}/>
       </label>
       <label>Time: 
-        {/* <input required type="time" value={time} onChange={(e) => setTime(e.target.value)}/> */}
           
         <select defaultValue="Hours" 
           name='filter'

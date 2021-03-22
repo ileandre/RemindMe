@@ -12,11 +12,6 @@ function Homepage(props) {
   const yearsArr = []
   const history = useHistory()
   const [error, setError] = useState("")
-  // const [month, setMonth] = useState("Month")
-  // const [numberOfDays, setNumberOfDays] = useState("Number of days")
-  // const [startDay, setStartDay] = useState("Start day")
-  // const [year, setYear] = useState("Year")
-  
   
   for (let year = 2021; year <= 2121; year++) (
     yearsArr.push(year)
@@ -53,63 +48,59 @@ function Homepage(props) {
       
       <form onSubmit={handleSubmit}>
         <div className="homepageFilters">
-        {/* <div className="firstPairOfFilters"> */}
-        <select defaultValue="Month"
-          name='filter'
-          id="monthFilter"
-          onChange={(e) => setMonth(e.target.value)}>
-            <option disabled value='Month'>Month</option>
-            {monthsArr.map((month, index) => {
-              return (
-                <option key={index} value={month}>{month}</option>
-              )
-            })}
-        </select>
+          <select defaultValue="Month"
+            name='filter'
+            id="monthFilter"
+            onChange={(e) => setMonth(e.target.value)}>
+              <option disabled value='Month'>Month</option>
+              {monthsArr.map((month, index) => {
+                return (
+                  <option key={index} value={month}>{month}</option>
+                )
+              })}
+          </select>
 
-        <select defaultValue="Number of days"
-          name='filter'
-          id="numberOfDaysFilter"
-          onChange={(e) => setNumberOfDays(parseInt(e.target.value))}>
-            <option disabled value='Number of days'>Number of days</option>
-            {numberOfDaysArr.map((num, index) => {
-              return (
-                <option key={index} value={num}>{num}</option>
-              )
-            })}
-        </select>
-        {/* </div> */}
+          <select defaultValue="Number of days"
+            name='filter'
+            id="numberOfDaysFilter"
+            onChange={(e) => setNumberOfDays(parseInt(e.target.value))}>
+              <option disabled value='Number of days'>Number of days</option>
+              {numberOfDaysArr.map((num, index) => {
+                return (
+                  <option key={index} value={num}>{num}</option>
+                )
+              })}
+          </select>
 
-        {/* <div className="secondPairOfFilters"> */}
-        <select defaultValue="Start day" 
-          name='filter'
-          id="startDayFilter"
-          onChange={(e) => setStartDay(e.target.value)}>
-            <option disabled value='Start day'>Start day</option>
-            {daysArr.map((day, index) => {
-              return (
-                <option key={index} value={day}>{day}</option>
-              )
-            })}
-        </select>
+          <select defaultValue="Start day" 
+            name='filter'
+            id="startDayFilter"
+            onChange={(e) => setStartDay(e.target.value)}>
+              <option disabled value='Start day'>Start day</option>
+              {daysArr.map((day, index) => {
+                return (
+                  <option key={index} value={day}>{day}</option>
+                )
+              })}
+          </select>
 
-        <select defaultValue="Year" 
-          name='filter'
-          id="yearFilter"
-          onChange={(e) => setYear(parseInt(e.target.value))}>
-            <option disabled value='Year'>Year</option>
-            {yearsArr.map((year, index) => {
-              return (
-                <option key={index} value={year}>{year}</option>
-              )
-            })}
-        </select>
-          </div>
-          {/* </div> */}
-        <div>
-          {/* <Link to="/calendar"> */}
-            <button type="submit">Create Calendar</button>
-          {/* </Link> */}
+          <select defaultValue="Year" 
+            name='filter'
+            id="yearFilter"
+            onChange={(e) => setYear(parseInt(e.target.value))}>
+              <option disabled value='Year'>Year</option>
+              {yearsArr.map((year, index) => {
+                return (
+                  <option key={index} value={year}>{year}</option>
+                )
+              })}
+          </select>
         </div>
+        
+        <div>
+          <button type="submit">Create Calendar</button>
+        </div>
+        
       </form>
 
       <h3 className="errorMessage">{error}</h3>
