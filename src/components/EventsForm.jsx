@@ -38,7 +38,7 @@ function EventsForm(props) {
     }
     timeHoursArr.push(hour)
 }
-  console.log(timeHoursArr)
+  // console.log(timeHoursArr)
 
   for (let min = 1; min < 60; min++) {
 
@@ -48,7 +48,7 @@ function EventsForm(props) {
     timeMinutesArr.push(`:${min}`)
 
   }
-  console.log(timeMinutesArr)
+  // console.log(timeMinutesArr)
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -67,9 +67,9 @@ function EventsForm(props) {
     setTitle("")
     setTime("")
     setDescription("")
-    timeHours("")
-    timeMinutes("")
-    timeUnits("")
+    setTimeHours("")
+    setTimeMinutes("")
+    setTimeUnits("")
   }
 
   return (

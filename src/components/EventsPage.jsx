@@ -7,93 +7,70 @@ function EventsPage(props) {
   const params = useParams()
   const { year, month, day } = params
 
-  // let arr = []
-  // let eArray = []
-  // let orderedArray = []
+  let arrAM = []
+  let arrPM = []
+  let eArray = []
+  let orderedArray = []
 
-  // const toInteger = () => {
+  const toInteger = () => {
     
-  //   for (let i = 0; i < props.eventsInfo.length; i++) {
-  //     let event = props.eventsInfo[i]
-  //     if (event.fields.year === parseInt(year) && event.fields.month === month.toString() && event.fields.day === parseInt(day)) {
-  //       // console.log(event.fields.time)
-  //       let time = event.fields.time.split(":")
-  //       // console.log(time)
-  //       let num = time.join("")
-  //       // console.log(num)
+    for (let i = 0; i < props.eventsInfo.length; i++) {
+      let event = props.eventsInfo[i]
+      if (event.fields.year === parseInt(year) && event.fields.month === month.toString() && event.fields.day === parseInt(day)) {
+        // console.log(event.fields.time)
+        let time = event.fields.time.split(":")
+        // console.log(time)
+        let num = time.join("")
+        // console.log(num)
 
-  //       event.fields.time = num
-  //       // console.log(event.fields.time)
+        event.fields.tempTime = num
+        // console.log(event.fields.time)
         
-  //       arr.push(num)
-  //       eArray.push(props.eventsInfo[i])
+        if (num.includes("am")) { arrAM.push(num) }
+        if (num.includes("pm")) { arrPM.push(num) }
 
-  //       console.log(num)
-  //       console.log(props.eventsInfo[i])
-  //       // parseInt(event.time)
-  //     }
-  //   }
+        eArray.push(props.eventsInfo[i])
 
-  // }
-  // toInteger()
+        console.log(num)
+        console.log(props.eventsInfo[i])
+        // parseInt(event.time)
+      }
+    }
 
-  // const inOrder = () => {
-  //   // console.log(arr)
+  }
+  toInteger()
 
-  //   arr.sort(function (a, b) { return a - b })
-  //   console.log(arr)
+  const inOrder = () => {
+    console.log(arrAM)
+    console.log(arrPM)
 
-  //   arr.forEach((time) => {
-  //     for (let i = 0; i < eArray.length; i++) {
-  //       console.log(eArray[i])
-  //       if (time === eArray[i].fields.time) {
-  //         // let array = []
-  //         // console.log(time)
-  //         // console.log(eArray[i].fields.time)
-  //         // if (59 < time && time < 1200) {
-  //         //   array = [...time.split("")]
-  //         //   console.log(array)
-  //         //   array.splice(2, 0, ":")
-  //         //   console.log(array)
-  //         //   array.push(" am")
-  //         //   array = [...array]
-  //         //   console.log(array)
-  //         //   time = array.join("")
-  //         //   console.log(time)
-  //         //   // eArray[i].fields.time = array.join("")
-  //         //   eArray[i].fields.time = time.toString()
-  //         //   console.log(eArray[i])
-  //         //   // eArray[i].fields.time = eArray[i].slice(0, 1) + ":" + eArray[i].slice(2)
-  //         //   console.log(eArray[i])
-  //         //   orderedArray.push(eArray[i])
-  //         // } else if (time < 60 || time > 1159) {
-  //         //   let temp
-  //         //   if (time > 1259) { temp = time - 1200 }
-  //         //   if (time < 100) { temp = time + 1200 }
-  //         //   console.log(temp)
-  //         //   array = [...temp.toString().split("")]
-  //         //   console.log(array)
-  //         //   if (time > 1259) { array.splice(0, 0, "0") }
-  //         //   console.log(array)
-  //         //   array.splice(2, 0, ":")
-  //         //   console.log(array)
-  //         //   array.push(" pm")
-  //         //   array = [...array]
-  //         //   console.log(array)
-  //         //   time = array.join("")
-  //         //   console.log(time)
-  //         //   // eArray[i].fields.time = array.join("")
-  //         //   eArray[i].fields.time = time.toString()
-  //         //   console.log(eArray[i])
-  //         //   // eArray[i].fields.time = eArray[i].slice(0, 1) + ":" + eArray[i].slice(2)
-  //         //   console.log(eArray[i])
-  //           orderedArray.push(eArray[i])
-  //         //}
-  //       }
-  //     }
-  //   })
-  // }
-  // inOrder()
+    arrAM.sort(function (a, b) { return a - b })
+    arrPM.sort(function (a, b) { return a - b })
+    console.log(arrAM)
+    console.log(arrPM)
+
+
+    arrAM.forEach((time) => {
+      for (let i = 0; i < eArray.length; i++) {
+        console.log(eArray[i])
+        if (eArray[i].fields.tempTime.includes(time)) {
+          orderedArray.push(eArray[i])
+        }
+      }
+    })
+
+    arrPM.forEach((time) => {
+      for (let i = 0; i < eArray.length; i++) {
+        console.log(eArray[i])
+        if (eArray[i].fields.tempTime.includes(time)) {
+          orderedArray.push(eArray[i])
+        }
+      }
+    })
+  }
+  console.log(orderedArray)
+  inOrder()
+
       // for (let i = 0; i < arr.length; i++) {
         // let array = []
         // // console.log(arr[i])
@@ -142,7 +119,7 @@ function EventsPage(props) {
       <div className="eventList">
         <p className="dayDateTitle">{month} {day}, {year}</p>
         <h2>Events</h2>
-        {props.eventsInfo.map((event, index) => {
+        {orderedArray.map((event, index) => {
           return (
             <Events
               key={index}
