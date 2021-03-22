@@ -27,26 +27,18 @@ function EventsPage(props) {
 
         eArray.push(props.eventsInfo[i])
 
-        console.log(num)
-        console.log(props.eventsInfo[i])
       }
     }
   }
   toInteger()
 
   const inOrder = () => {
-    console.log(arrAM)
-    console.log(arrPM)
 
     arrAM.sort(function (a, b) { return a - b })
     arrPM.sort(function (a, b) { return a - b })
-    console.log(arrAM)
-    console.log(arrPM)
-
 
     arrAM.forEach((time) => {
       for (let i = 0; i < eArray.length; i++) {
-        console.log(eArray[i])
         if (eArray[i].fields.tempTime.includes(time)) {
           orderedArray.push(eArray[i])
         }
@@ -55,7 +47,6 @@ function EventsPage(props) {
 
     arrPM.forEach((time) => {
       for (let i = 0; i < eArray.length; i++) {
-        console.log(eArray[i])
         if (eArray[i].fields.tempTime.includes(time)) {
           orderedArray.push(eArray[i])
         }
@@ -79,10 +70,7 @@ function EventsPage(props) {
             <Events
               key={index}
               event={event}
-              eventsInfo={props.eventsInfo}
               setEventToggleFetch={props.setEventToggleFetch}
-              setNumberOfDays={props.setNumberOfDays}
-              numberOfDays={props.numberOfDays}
             />
           )
         })}
@@ -93,10 +81,7 @@ function EventsPage(props) {
             year={year}
             month={month}
             day={day}
-            eventsInfo={props.eventsInfo}
-            setEventToggleFetch={props.setEventToggleFetch}
-            setNumberOfDays={props.setNumberOfDays}
-            numberOfDays={props.numberOfDays} />
+            setEventToggleFetch={props.setEventToggleFetch} />
           </div>
         </div>
     </div>

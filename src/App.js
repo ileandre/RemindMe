@@ -38,7 +38,6 @@ function App() {
 
       <Route exact path="/">
         <Homepage
-          calendarInfo={calendarInfo}
           setToggleFetch={setToggleFetch}
           setMonth={setMonth}
           month={month}
@@ -55,7 +54,6 @@ function App() {
           calendarInfo={calendarInfo}
           eventsInfo={eventsInfo}
           setToggleFetch={setToggleFetch}
-          setNumberOfDays={setNumberOfDays}
           startDay={startDay}
           numberOfDays={numberOfDays}
           month={month}

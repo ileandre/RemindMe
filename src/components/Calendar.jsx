@@ -62,7 +62,6 @@ function Calendar(props) {
                 <NotesList
                 key={index}
                 note={note}
-                calendarInfo={props.calendarInfo}
                 setToggleFetch={props.setToggleFetch}
                 />
               )
