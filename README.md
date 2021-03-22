@@ -29,46 +29,56 @@ This is a monthly calendar app where users input the month, number of days in th
 EVENTS
 ```
 {
-   {
-    "records": [
+  "records": [
         {
-            "id": "rectcymMKNQjbsN23",
+            "id": "recFGAB4G8Gscb78l",
             "fields": {
                 "day": 10,
-                "time": "10:30 am",
-                "title": "Irma's Birthday",
+                "timeHours": "07",
+                "title": "Birthday Dinner",
                 "month": "June",
-                "description": "It's time to go wild!",
-                "year": 2021
+                "description": "Don't forget your ID!",
+                "year": 2021,
+                "timeMinutes": ":30",
+                "timeUnits": " pm",
+                "time": "07:30 pm"
             },
-            "createdTime": "2021-03-14T23:35:38.000Z"
+            "createdTime": "2021-03-22T16:15:16.000Z"
         },
         {
-            "id": "reccYAw6Dd5DgMO5Z",
+            "id": "recWyGVqNY0MkTskl",
             "fields": {
-                "day": 25,
-                "time": "12:00 pm",
-                "title": "Doctors Appointment",
+                "day": 10,
+                "timeHours": "04",
+                "title": "Make up appointment",
                 "month": "June",
-                "description": "Don't forget the insurance card",
-                "year": 2021
+                "description": "Bring your make up bag!",
+                "year": 2021,
+                "timeMinutes": ":30",
+                "timeUnits": " pm",
+                "time": "04:30 pm"
             },
-            "createdTime": "2021-03-14T23:35:38.000Z"
+            "createdTime": "2021-03-22T16:18:46.000Z"
         },
         {
-            "id": "rectmADYiqLbstNBB",
+            "id": "recjsbChV9wH844we",
             "fields": {
-                "day": 12,
-                "time": "7:30 pm",
-                "title": "Family Dinner",
+                "day": 10,
+                "timeHours": "08",
+                "title": "The Big 50!",
                 "month": "June",
-                "description": "Bring cash.",
-                "year": 2021
+                "description": "Let's get lit!",
+                "year": 2045,
+                "timeMinutes": ":30",
+                "timeUnits": " pm",
+                "time": "08:30 pm"
             },
-            "createdTime": "2021-03-14T23:35:38.000Z"
+            "createdTime": "2021-03-22T18:32:32.000Z"
         }
     ],
-    "o
+    "offset": "recjsbChV9wH844we"
+}
+    
 ```
 
 NOTES
@@ -76,31 +86,36 @@ NOTES
 {
     "records": [
         {
-            "id": "recMPSywlGq4dvRTp",
+            "id": "recNn1qGCgWBFU9rN",
             "fields": {
-                "month": "June",
-                "notes": "Inspire"
+                "startDay": "Tuesday",
+                "numberOfDays": 30,
+                "year": 2021,
+                "month": "June"
             },
-            "createdTime": "2021-03-15T19:27:08.000Z"
+            "createdTime": "2021-03-22T16:13:58.000Z"
         },
         {
-            "id": "recASRScgD1dVtw01",
+            "id": "recDr2mfqZuwfiqRF",
             "fields": {
-                "month": "June",
-                "notes": "laugh"
+                "year": 2021,
+                "note": "Birthday month shenanigans!",
+                "month": "June"
             },
-            "createdTime": "2021-03-15T19:27:08.000Z"
+            "createdTime": "2021-03-22T16:14:47.000Z"
         },
         {
-            "id": "recFlQuJn0IGZawgU",
+            "id": "recFGyOu3FIqHKqSV",
             "fields": {
-                "month": "June",
-                "notes": "happiness"
+                "startDay": "Tuesday",
+                "numberOfDays": 30,
+                "year": 2021,
+                "month": "June"
             },
-            "createdTime": "2021-03-15T19:27:08.000Z"
+            "createdTime": "2021-03-22T16:37:46.000Z"
         }
     ],
-    "offset": "recFlQuJn0IGZawgU"
+    "offset": "recFGyOu3FIqHKqSV"
 }
 ```
 
@@ -118,8 +133,10 @@ NOTES
 # Post-MVP: 
 
 1) Use 2nd API to automatically generate basic calendar information
-2) Color change mode
+2) Color theme change mode
 3) Put and delete from Airtable
+4) Previously created calendars listed in the homepage
+5) Change the color of a day that has events in it. Color indicators.
 
 
 # Project Schedule: 
