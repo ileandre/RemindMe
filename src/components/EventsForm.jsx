@@ -22,7 +22,7 @@ function EventsForm(props) {
     timeHoursArr.push(hour);
   }
 
-  for (let min = 1; min < 60; min++) {
+  for (let min = 0; min < 60; min++) {
     if (min < 10) {
       min = `0${min}`;
     }
