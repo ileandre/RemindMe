@@ -1,14 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Pangolin&family=Permanent+Marker&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pangolin&family=Permanent+Marker&display=swap");
 
 /*--------------------TAGS--------------------*/
 
 button {
   font-size: 15px;
   padding: 5px;
-  background-color:rgb(8, 12, 73);
+  background-color: rgb(8, 12, 73);
   color: white;
-  font-family: 'Pangolin', cursive;
+  font-family: "Pangolin", cursive;
   border-radius: 6px;
 }
 
@@ -17,7 +17,6 @@ select {
   margin-bottom: 10px;
   font-size: 17px;
 }
-
 
 /*--------------------CLASS--------------------*/
 
@@ -35,18 +34,18 @@ select {
   margin-top: 2px;
 }
 
-.appName span{
+.appName span {
   margin-right: 0px;
 }
 
 .calendar {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  box-sizing: border-box; 
+  box-sizing: border-box;
   border: black solid 2px;
 }
 
-.calendar a{
+.calendar a {
   padding-bottom: 0px;
   display: grid;
   border: black solid 1px;
@@ -64,8 +63,9 @@ select {
   margin-bottom: 0px;
   margin-top: 0px;
   border-width: 1px;
-  font-family: 'Permanent Marker', cursive;
-  color: rgb(8, 12, 73);}
+  font-family: "Permanent Marker", cursive;
+  color: rgb(8, 12, 73);
+}
 
 .calendarNav {
   display: flex;
@@ -75,15 +75,15 @@ select {
 }
 
 .calendarPage {
-  background-color:rgb(214, 237, 240);
+  background-color: rgb(214, 237, 240);
   padding-bottom: 5px;
 }
 
 .calendarYear {
   margin-top: 0px;
   margin-bottom: 3px;
-  font-family: 'Pangolin', cursive;
-  color:rgb(29, 71, 160);
+  font-family: "Pangolin", cursive;
+  color: rgb(29, 71, 160);
   font-weight: 5px;
 }
 
@@ -92,9 +92,9 @@ select {
   font-weight: bold;
   border-bottom: black solid 2px;
   border-left: black solid 1px;
-  background-color:rgb(13, 70, 104);
+  background-color: rgb(13, 70, 104);
   color: rgb(226, 214, 202);
-  font-family: 'Pangolin', cursive;
+  font-family: "Pangolin", cursive;
 }
 
 .dayNumbers {
@@ -103,10 +103,10 @@ select {
 
 .days {
   display: grid;
-  grid-template-areas: 
-  ". . . D D"
-  ". . . D D"
-  ". . . . .";
+  grid-template-areas:
+    ". . . D D"
+    ". . . D D"
+    ". . . . .";
 }
 
 .days h3 {
@@ -118,16 +118,16 @@ select {
 
 .event h2 {
   border-bottom: black solid 1px;
-  }
+}
 
 .eventDeleteButton {
-    display: block;
-    margin-top: auto;
-    margin-bottom: auto;
-    width: 40%;
-    margin-right: 5px;
-    text-align: right;
-  }
+  display: block;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 40%;
+  margin-right: 5px;
+  text-align: right;
+}
 
 .eventForm label {
   display: block;
@@ -136,14 +136,14 @@ select {
 
 .eventForm input,
 .notesForm textarea,
-.eventForm textarea{
+.eventForm textarea {
   background-color: rgb(243, 242, 236);
 }
 
 .eventInfo p {
-margin-bottom: 5px;
-margin-top: 5px;
-font-size: 13px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  font-size: 13px;
 }
 
 .eventInfo span {
@@ -152,7 +152,7 @@ font-size: 13px;
 }
 
 .eventInfo {
-  font-family: 'Pangolin', cursive;
+  font-family: "Pangolin", cursive;
   margin-left: 10px;
 }
 
@@ -160,7 +160,7 @@ font-size: 13px;
   margin-left: 5%;
   margin-right: 5%;
   margin: black solid 2px;
-  background-color:rgb(26, 87, 136);
+  background-color: rgb(26, 87, 136);
   border-radius: 8px;
 }
 
@@ -169,10 +169,10 @@ font-size: 13px;
 }
 
 .eventForm label {
-  font-family: 'Pangolin', cursive;
+  font-family: "Pangolin", cursive;
   color: rgb(224, 212, 212);
   font-weight: bold;
-  font-family: 'Pangolin', cursive;
+  font-family: "Pangolin", cursive;
   margin-left: 10px;
   margin-top: 10px;
 }
@@ -194,20 +194,20 @@ font-size: 13px;
 }
 
 .dayDateTitle {
-  color:rgb(163, 225, 233);
-  font-family: 'Permanent Marker', cursive;
+  color: rgb(163, 225, 233);
+  font-family: "Permanent Marker", cursive;
   font-size: 25px;
 }
 
 .errorMessage {
   color: rgb(194, 17, 17);
-  font-family: 'Pangolin', cursive;
+  font-family: "Pangolin", cursive;
 }
 
 .eventList h2,
 .eventsForm h3 {
-  color:rgb(214, 237, 240);
-  font-family: 'Pangolin', cursive;
+  color: rgb(214, 237, 240);
+  font-family: "Pangolin", cursive;
 }
 
 .eventNav {
@@ -230,19 +230,23 @@ font-size: 13px;
   border-radius: 4px;
 }
 
+.hasEvent {
+  background-color: yellow;
+}
+
 .homepage {
-  background-color:rgb(214, 237, 240);
+  background-color: rgb(214, 237, 240);
   margin-bottom: 0px;
 }
 
 .homepage button {
-  margin-top: 35px; 
+  margin-top: 35px;
   margin-bottom: 5px;
 }
 
 .homepage p {
-  color:rgb(8, 12, 73);
-  font-family: 'Pangolin', cursive;
+  color: rgb(8, 12, 73);
+  font-family: "Pangolin", cursive;
 }
 
 .homepageFilters {
@@ -250,20 +254,19 @@ font-size: 13px;
   width: 75%;
 }
 
-.homepageFilters select{
-  background-color:rgb(195, 221, 223);
-  font-family: 'Pangolin', cursive;
+.homepageFilters select {
+  background-color: rgb(195, 221, 223);
+  font-family: "Pangolin", cursive;
   border-radius: 4px;
-  color:rgb(8, 12, 73);
-
+  color: rgb(8, 12, 73);
 }
 
 .homeTitle h1 {
   font-size: 20px;
-  font-family: 'Pangolin', cursive;
+  font-family: "Pangolin", cursive;
   margin: 40px 40px;
   margin-bottom: 0px;
-  color:rgb(8, 12, 73);
+  color: rgb(8, 12, 73);
 }
 
 .homeTitle span {
@@ -272,8 +275,8 @@ font-size: 13px;
 }
 
 .me {
-  color:rgb(197, 162, 48);
-  font-family: 'Permanent Marker', cursive;
+  color: rgb(197, 162, 48);
+  font-family: "Permanent Marker", cursive;
 }
 
 .notes {
@@ -298,19 +301,19 @@ font-size: 13px;
   margin: 10px;
   font-size: 15px;
   margin-top: 5px;
-  font-family: 'Pangolin', cursive;
+  font-family: "Pangolin", cursive;
 }
 
 .notesTitle {
-margin-bottom: 5px;
-border-bottom: black solid 1px;
-color: white;
-font-family: 'Permanent Marker', cursive;
+  margin-bottom: 5px;
+  border-bottom: black solid 1px;
+  color: white;
+  font-family: "Permanent Marker", cursive;
 }
 
 .notesList {
   margin: rgb(8, 12, 73) solid 1px;
-  background-color:rgb(26, 87, 136);
+  background-color: rgb(26, 87, 136);
 }
 
 .notesForm {
@@ -325,23 +328,27 @@ font-family: 'Permanent Marker', cursive;
   margin-left: 10px;
   color: rgb(224, 212, 212);
   font-weight: bold;
-  font-family: 'Pangolin', cursive;
+  font-family: "Pangolin", cursive;
+}
 
+.notesForm textarea,
+.eventForm textarea {
+  width: 90%;
+  height: 0 auto;
 }
 
 .remind {
-  color:rgb(46, 177, 159);
-  font-family: 'Permanent Marker', cursive;
-  }
+  color: rgb(46, 177, 159);
+  font-family: "Permanent Marker", cursive;
+}
 
 /*--------------------Media Query iPad--------------------*/
 
 @media (min-width: 768px) {
-
   button {
     font-size: 25px;
   }
-  
+
   select {
     display: inline;
   }
@@ -357,7 +364,7 @@ font-family: 'Permanent Marker', cursive;
   .calendarYear {
     font-size: 30px;
   }
-  
+
   .dayNames {
     font-size: 22px;
   }
@@ -374,7 +381,7 @@ font-family: 'Permanent Marker', cursive;
 
   .eventList h2,
   .eventsForm h3 {
-  font-size: 40px;
+    font-size: 40px;
   }
 
   .homeTitle h1,
@@ -397,9 +404,9 @@ font-family: 'Permanent Marker', cursive;
 
   .homepageFilters {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);   
+    grid-template-columns: repeat(4, 1fr);
     margin: auto;
-    width: 75%; 
+    width: 75%;
   }
 
   .homepageFilters select {
@@ -420,43 +427,30 @@ font-family: 'Permanent Marker', cursive;
   .eventInfo span {
     font-size: 23px;
   }
-
-  .notesForm textarea,
-  .eventForm textarea {
-    display: flex;
-    justify-content: space-between;
-    margin: 10px;
-    padding-top: 10px 10px;
-    text-align: left;
-    background-color: rgb(243, 242, 236);
-    border-radius: 4px;
-  }
-
 }
 
 /*--------------------Media Query Desktop--------------------*/
 
 @media (min-width: 1024px) {
-  
   .calendar {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
   }
 
-  .calendar a{
+  .calendar a {
     padding-bottom: 40px;
     display: grid;
-    grid-template-areas: 
-    "W W W D D"
-    "W W W D D"
-    "W W W W W"
-    "W W W W W";
+    grid-template-areas:
+      "W W W D D"
+      "W W W D D"
+      "W W W W W"
+      "W W W W W";
   }
 
   .calendarBoard {
     display: grid;
     grid-template-columns: 3fr 1fr;
-    box-sizing: border-box; 
+    box-sizing: border-box;
     border: black solid 2px;
   }
 
@@ -473,5 +467,4 @@ font-family: 'Permanent Marker', cursive;
     margin-left: 25%;
     margin-right: 25%;
   }
-
 }

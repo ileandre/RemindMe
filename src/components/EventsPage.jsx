@@ -1,59 +1,69 @@
-import {useParams} from "react-router-dom"
-import { Link } from "react-router-dom"
-import Events from "./Events"
-import EventsForm from "./EventsForm"
+import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
+import Events from "./Events";
+import EventsForm from "./EventsForm";
 
 function EventsPage(props) {
-  const params = useParams()
-  const { year, month, day } = params
+  const params = useParams();
+  const { year, month, day } = params;
 
-  let arrAM = []
-  let arrPM = []
-  let eArray = []
-  let orderedArray = []
+  let arrAM = [];
+  let arrPM = [];
+  let eArray = [];
+  let orderedArray = [];
 
   const toInteger = () => {
-    
     for (let i = 0; i < props.eventsInfo.length; i++) {
-      let event = props.eventsInfo[i]
-      if (event.fields.time && event.fields.year === parseInt(year) && event.fields.month === month.toString() && event.fields.day === parseInt(day)) {
-        let time = event.fields.time.split(":")
-        let num = time.join("")
+      let event = props.eventsInfo[i];
+      if (
+        event.fields.time &&
+        event.fields.year === parseInt(year) &&
+        event.fields.month === month.toString() &&
+        event.fields.day === parseInt(day)
+      ) {
+        let time = event.fields.time.split(":");
+        let num = time.join("");
 
-        event.fields.tempTime = num
-        
-        if (num.includes("am")) { arrAM.push(num) }
-        if (num.includes("pm")) { arrPM.push(num) }
+        event.fields.tempTime = num;
 
-        eArray.push(props.eventsInfo[i])
+        if (num.includes("am")) {
+          arrAM.push(num);
+        }
+        if (num.includes("pm")) {
+          arrPM.push(num);
+        }
 
+        eArray.push(props.eventsInfo[i]);
       }
     }
-  }
-  toInteger()
+  };
+  toInteger();
 
   const inOrder = () => {
-
-    arrAM.sort(function (a, b) { return a - b })
-    arrPM.sort(function (a, b) { return a - b })
+    arrAM.sort(function (a, b) {
+      return a - b;
+    });
+    arrPM.sort(function (a, b) {
+      return a - b;
+    });
 
     arrAM.forEach((time) => {
       for (let i = 0; i < eArray.length; i++) {
         if (eArray[i].fields.tempTime.includes(time)) {
-          orderedArray.push(eArray[i])
+          orderedArray.push(eArray[i]);
         }
       }
-    })
+    });
 
     arrPM.forEach((time) => {
       for (let i = 0; i < eArray.length; i++) {
         if (eArray[i].fields.tempTime.includes(time)) {
-          orderedArray.push(eArray[i])
+          orderedArray.push(eArray[i]);
         }
       }
-    })
-  }
-  inOrder()
+    });
+  };
+  inOrder();
 
   return (
     <div className="eventPage">
@@ -63,7 +73,9 @@ function EventsPage(props) {
         </Link>
       </div>
       <div className="eventList">
-        <p className="dayDateTitle">{month} {day}, {year}</p>
+        <p className="dayDateTitle">
+          {month} {day}, {year}
+        </p>
         <h2>Events</h2>
         {orderedArray.map((event, index) => {
           return (
@@ -72,21 +84,21 @@ function EventsPage(props) {
               event={event}
               setEventToggleFetch={props.setEventToggleFetch}
             />
-          )
+          );
         })}
-        
+
         <div className="eventsForm">
           <h3>Form</h3>
           <EventsForm
             year={year}
             month={month}
             day={day}
-            setEventToggleFetch={props.setEventToggleFetch} />
-          </div>
+            setEventToggleFetch={props.setEventToggleFetch}
+          />
         </div>
+      </div>
     </div>
-
-  )
+  );
 }
 
-export default EventsPage
+export default EventsPage;

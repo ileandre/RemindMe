@@ -1,22 +1,22 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
 function Days(props) {
-  const { month, year, day } = props
+  const { month, year, day } = props;
 
-  let num
+  let num;
   if (day < 1) {
-    num = " "
-    } else {
-    num = day.toString()
-    }
+    num = " ";
+  } else {
+    num = day.toString();
+  }
 
-  return(
+  return (
     <Link to={`/events/${year}/${month}/${day}`}>
       <div className="days">
-      <h3 className="dayNumbers">{num}</h3>
+        <h3 className="dayNumbers">{num}</h3>
       </div>
     </Link>
-  )
+  );
 }
 
-export default Days
+export default Days;
