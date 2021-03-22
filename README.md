@@ -128,28 +128,30 @@ NOTES
 |---|---| ---|
 |Mar 13-14 | Prompt / Wireframes / Priority Matrix / Timeframes | Complete
 |Mar 15| Project Approval/Airtable set up/Pseudocode | Complete
-|Mar 16-18| Core Application Structure (components/CRUD data) | 
-|Mar 19-20| Styling with CSS  | 
-|Mar 21| Post-MVP/clean code | 
-|Mar 22| Presentations | 
+|Mar 16-18| Core Application Structure (components/CRUD data) | Complete
+|Mar 19-20| Styling with CSS  | Complete
+|Mar 21| Post-MVP/clean code | Complete
+|Mar 22| Presentations | Complete
 
 
 # Timeframes: 
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Psuedo code | L | 2hrs | 2.5hrs |  |
-| Setup Airtable | H | 2hrs| 1.5hrs |  |
-| API Functionality | H | 3hrs| 3.5hrs |  |
-| Create Homepage component with Link | H | 2hrs| 3hrs |  |
-| Create Calendar component with Link and Renders | H | 5hrs| 6hrs |  |
-| Create Notes component with buttons and access API | H | 4hrs|  |  |
-| Create Day Agenda component with renders and API access | H | 4hrs | 3.5hrs |  |
-| Create Event component with buttons and access API | H | 3hrs |  |  |
-| Create Form component with button and access API | H | 3hrs |  |  |
-| CSS General Styling | H | 10hrs |  |  |
-| CSS Media queries | H | 3hrs |  |  |
-| Total | H | 41hrs |  |  |
+| Psuedo code | L | 2hrs | 2.5hrs | 2.5hr |
+| Setup Airtable | H | 2hrs| 1.5hrs | 1.5hrs |
+| API Functionality | H | 3hrs| 3.5hrs | 3.5hrs |
+| Create Homepage component with Link | H | 2hrs| 3hrs | 3hrs |
+| Create Calendar component with Link and Renders | H | 5hrs| 10.5hrs | 10.5hrs |
+| Create NotesList component with buttons and access API | H | 4hrs| 6hrs | 6hrs |
+| Create NotesForm component with buttons and access API | H | 3hrs | 3.5hrs | 3.5hrs |
+| Create Events component with buttons and access API | H | 3hrs | 2hrs | 2hrs |
+| Create EventsForm component with buttons and access API | H | 3hrs | 3.5hrs | 3.5hrs |
+| Create EventPage component with buttons and access API | H | 3hrs | 6hrs | 6hrs |
+| Create Form component with button and access API | H | 3hrs | 3.5hrs | 3.5hrs |
+| CSS General Styling | H | 10hrs | 12hrs | 12hrs |
+| CSS Media queries | H | 3hrs | 2hrs | 2hrs |
+| Total | H | 41hrs | 59.5hrs | 59.5hrs |
 
 
 # SWOT Analysis: 
