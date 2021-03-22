@@ -6,7 +6,7 @@ function NotesForm(props) {
   const [note, setNote] = useState("");
   const { month, numberOfDays, startDay, year } = props;
 
-  const handleSubmit = async (e) => {                                   
+  const handleSubmit = async (e) => {                                      //accesses the notes api to add the new note you created
     e.preventDefault();
     const newNote = {
       month,
@@ -22,7 +22,7 @@ function NotesForm(props) {
 
   return (
     <div className="notesForm">
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>                                      {/* references the handleSubmit function to so it can access the note stable in the API */}
         <label>New Note: </label>
         <textarea
           type="textarea"

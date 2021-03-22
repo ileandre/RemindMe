@@ -4,7 +4,7 @@ import { eventsBaseURL, config } from "../services";
 function Events(props) {
   const task = props.event.fields;
 
-  const erase = async () => {
+  const erase = async () => {                                               //this function accesses the events table from the API to delete the selected event
     const eraseEventURL = `${eventsBaseURL}/${props.event.id}`;
     await axios.delete(eraseEventURL, config);
     props.setEventToggleFetch((curr) => !curr);
@@ -24,7 +24,7 @@ function Events(props) {
         </p>
       </div>
       <div className="eventDeleteButton">
-        <button onClick={erase}>Delete</button>
+        <button onClick={erase}>Delete</button>                              {/* References the erase function that access the api */}
       </div>
     </div>
   );

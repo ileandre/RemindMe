@@ -11,7 +11,7 @@ function Days(props) {
   }
 
   return (
-    <Link to={`/events/${year}/${month}/${day}`}>
+    <Link to={`/events/${year}/${month}/${day}`}>                         {/*Makes each day a link to a semi-unique event page. The numberOfDays in the month doesn't effect the eventpage*/}
       <div className="days">
         <h3 className="dayNumbers">{num}</h3>
       </div>

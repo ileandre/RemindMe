@@ -12,7 +12,7 @@ function EventsPage(props) {
   let eArray = [];
   let orderedArray = [];
 
-  const toInteger = () => {
+  const toInteger = () => {                                         //this function removes the colon from your time column of the events table in your api and adds am and pm
     for (let i = 0; i < props.eventsInfo.length; i++) {
       let event = props.eventsInfo[i];
       if (
@@ -27,19 +27,19 @@ function EventsPage(props) {
         event.fields.tempTime = num;
 
         if (num.includes("am")) {
-          arrAM.push(num);
+          arrAM.push(num);                                        //holds all the event times
         }
         if (num.includes("pm")) {
           arrPM.push(num);
         }
 
-        eArray.push(props.eventsInfo[i]);
+        eArray.push(props.eventsInfo[i]);                         //holds all the events objects 
       }
     }
   };
   toInteger();
 
-  const inOrder = () => {
+  const inOrder = () => {                                         //This function sorts the times and pushes the corresponding api object to the orderedArray
     arrAM.sort(function (a, b) {
       return a - b;
     });
@@ -77,7 +77,7 @@ function EventsPage(props) {
           {month} {day}, {year}
         </p>
         <h2>Events</h2>
-        {orderedArray.map((event, index) => {
+        {orderedArray.map((event, index) => {                     {/* maps all the event objects fomr the orderedArray rray and renders the event component */}
           return (
             <Events
               key={index}
@@ -87,7 +87,7 @@ function EventsPage(props) {
           );
         })}
 
-        <div className="eventsForm">
+        <div className="eventsForm">                                 {/*renders the form*/}
           <h3>Form</h3>
           <EventsForm
             year={year}

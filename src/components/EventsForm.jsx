@@ -13,7 +13,7 @@ function EventsForm(props) {
   const timeUnitsArr = [" am", " pm"];
   const [error, setError] = useState("");
 
-  for (let hour = 1; hour <= 12; hour++) {
+  for (let hour = 1; hour <= 12; hour++) {                          //The for loops below change the integers to strings with 0 in the beginning of the 1 digit hours and minutes, then pushes the numbers to arrays that hold the hur and minute values
     if (hour < 10) {
       hour = `0${hour}`;
     } else {
@@ -29,7 +29,7 @@ function EventsForm(props) {
     timeMinutesArr.push(`:${min}`);
   }
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e) => {                                //accesses the events table in the API to add new events
     e.preventDefault();
 
     const newEvent = {
@@ -44,7 +44,7 @@ function EventsForm(props) {
     };
     await axios.post(eventsBaseURL, { fields: newEvent }, config);
 
-    if (
+    if (                                                            //if even one of the time dropdown menu fields is not chosen there will be an error message
       timeHours === "Hours" ||
       timeMinutes === "Minutes" ||
       timeUnits === "Units"
@@ -62,7 +62,7 @@ function EventsForm(props) {
 
   return (
     <div className="eventForm">
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>                              {/* This references the handSubmit button that accesses the api */}
         <label>
           Title:
           <input
@@ -72,7 +72,7 @@ function EventsForm(props) {
             onChange={(e) => setTitle(e.target.value)}
           />
         </label>
-        <label>
+        <label>                                                   {/* the time input section is generated using arrays that populate the option tags */}
           Time:
           <select
             defaultValue="Hours"
