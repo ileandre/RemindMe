@@ -148,8 +148,8 @@ select {
   text-align: left;
 }
 
-.notesForm textarea,
 .eventForm input,
+.notesForm textarea,
 .eventForm textarea{
   background-color: rgb(243, 242, 236);
 }
@@ -215,6 +215,11 @@ font-size: 13px;
   font-size: 25px;
 }
 
+.errorMessage {
+  color: rgb(194, 17, 17);
+  font-family: 'Pangolin', cursive;
+}
+
 .eventList h2,
 .eventsForm h3 {
   color:rgb(214, 237, 240);
@@ -254,11 +259,6 @@ font-size: 13px;
 
 .homepage p {
   color:rgb(8, 12, 73);
-  font-family: 'Pangolin', cursive;
-}
-
-.homepage h3 {
-  color: rgb(194, 17, 17);
   font-family: 'Pangolin', cursive;
 }
 
@@ -418,7 +418,7 @@ font-family: 'Permanent Marker', cursive;
   }
 
   .homepage p,
-  .homepage h3 {
+  .errorMessage {
     font-size: 25px;
   }
 
@@ -450,9 +450,16 @@ font-family: 'Permanent Marker', cursive;
 
   .notesForm textarea,
   .eventForm textarea {
-    float: center;
+    /* float: center;
     width: 90%;
-    height: auto;
+    height: auto; */
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    padding-top: 10px 10px;
+    text-align: left;
+    background-color: rgb(243, 242, 236);
+    border-radius: 4px;
   }
 
 }

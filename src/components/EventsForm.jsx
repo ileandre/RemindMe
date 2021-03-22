@@ -1,18 +1,23 @@
 import axios from 'axios'
 import {eventsBaseURL, config} from "../services"
 import { useState } from 'react'
+// import { useHistory } from "react-router-dom"
+
 // import { useParams } from 'react-router-dom'
 
 function EventsForm(props) {
   const [title, setTitle] = useState("")
   const [time, setTime] = useState("")
   const [description, setDescription] = useState("")
-  const [timeHours, setTimeHours] = useState("")
-  const [timeMinutes, setTimeMinutes] = useState("")
-  const [timeUnits, setTimeUnits] = useState("")
+  const [timeHours, setTimeHours] = useState("Hours")
+  const [timeMinutes, setTimeMinutes] = useState("Minutes")
+  const [timeUnits, setTimeUnits] = useState("Units")
   const timeHoursArr = []
   const timeMinutesArr = []
   const timeUnitsArr = [" am", " pm"]
+  const [error, setError] = useState("")
+  // const history = useHistory()
+  // const { day, month, year } = props
   // const params = useParams()
 
 
@@ -52,6 +57,7 @@ function EventsForm(props) {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+    
     const newEvent = {
       title,
       timeHours,
@@ -62,7 +68,14 @@ function EventsForm(props) {
       day: parseInt(props.day),
       year: parseInt(props.year)
     }
-    await axios.post(eventsBaseURL, {fields: newEvent}, config)
+    await axios.post(eventsBaseURL, { fields: newEvent }, config)
+
+    if (timeHours === "Hours" || timeMinutes === "Minutes" || timeUnits === "Units") {
+      setError("ERROR! You must select all the options for 'Time'.")
+    // } else {
+    //   history(`/events/${year}/${month}/${day}`)
+    }
+
     props.setEventToggleFetch((curr) => !curr)
     setTitle("")
     setTime("")
@@ -123,7 +136,9 @@ function EventsForm(props) {
         <div className="eventsFormButton">
           <button type="submit">Add Event</button>
         </div>
-    </form>
+      </form>
+      
+      <h3 className="errorMessage">{error}</h3>
     </div>
   )
 }

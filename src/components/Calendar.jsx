@@ -25,15 +25,15 @@ function Calendar(props) {
     d = 6
   }
 
-    for (let day = 1 - d; day <= 30; day++) {
+    for (let day = 1 - d; day <= numberOfDays; day++) {
         numOfDaysArr.push(<>
-          <Days day={day} month={month} year={year} />
+          <Days key={day} day={day} month={month} year={year} />
         </>)
       }
 
-  // if (numberOfDays === 0) {
-  //   history.push("/")
-  // }
+  if (numberOfDays === 0) {
+    history.push("/")
+  }
 
   return(
     <div className="calendarPage">
@@ -70,6 +70,7 @@ function Calendar(props) {
           })}
           
           <NotesForm 
+            key={props.eventsInfo.id}
             month={month}
             year={year}
             setToggleFetch={props.setToggleFetch}

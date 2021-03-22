@@ -16,7 +16,7 @@ function EventsPage(props) {
     
     for (let i = 0; i < props.eventsInfo.length; i++) {
       let event = props.eventsInfo[i]
-      if (event.fields.year === parseInt(year) && event.fields.month === month.toString() && event.fields.day === parseInt(day)) {
+      if (event.fields.time && event.fields.year === parseInt(year) && event.fields.month === month.toString() && event.fields.day === parseInt(day)) {
         // console.log(event.fields.time)
         let time = event.fields.time.split(":")
         // console.log(time)

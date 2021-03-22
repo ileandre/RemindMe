@@ -24,21 +24,14 @@ function Homepage(props) {
   
   const handleSubmit = async (e) => {
     e.preventDefault()
-
-    if (month !== "Month" && numberOfDays
-      !== "Number of days" && startDay
-      !== "Start day" && year !== 0) {
-      const newCalendarInfo = {
-        month,
-        note: "",
-        numberOfDays,
-        startDay,
-        year,
-      }
-      await axios.post(notesBaseURL,{fields: newCalendarInfo}, config)
-    } else {
-      <h2>"Please fill in ALL the fields."</h2>
+    const newCalendarInfo = {
+      month,
+      note: "",
+      numberOfDays,
+      startDay,
+      year,
     }
+    await axios.post(notesBaseURL,{fields: newCalendarInfo}, config)
     props.setToggleFetch((curr) => !curr)
     
     if (month === "Month" || numberOfDays === 0 || startDay === "Start day" || year === 0) {
@@ -119,7 +112,7 @@ function Homepage(props) {
         </div>
       </form>
 
-      <h3>{error}</h3>
+      <h3 className="errorMessage">{error}</h3>
     </div>
   )
 }
