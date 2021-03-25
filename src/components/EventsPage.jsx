@@ -69,7 +69,7 @@ function EventsPage(props) {
     <div className="eventPage">
       <div className="eventNav">
         <Link to="/calendar">
-          <button>!Calendar!</button>
+          <button>Calendar</button>
         </Link>
       </div>
       <div className="eventList">
