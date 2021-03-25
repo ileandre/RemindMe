@@ -23,19 +23,13 @@ function EventsPage(props) {
       ) {
         let time = event.fields.time.split(":");
         let num = time.join("");
-        event.fields.tempTime = time.join("")
-        // event.fields.tempTime = num;
 
-        // if (num.includes("am")) {
-        //   arrAM.push(num);                                        //holds all the event times
-        // }
-        // if (num.includes("pm")) {
-        //   arrPM.push(num);
-        // }
-        if (event.fields.timeUnits === "am") {
-          arrAM.push(num);
+        event.fields.tempTime = num;
+
+        if (num.includes("am")) {
+          arrAM.push(num);                                        //holds all the event times
         }
-        if (event.fields.timeUnits === "pm") {
+        if (num.includes("pm")) {
           arrPM.push(num);
         }
 
@@ -75,7 +69,7 @@ function EventsPage(props) {
     <div className="eventPage">
       <div className="eventNav">
         <Link to="/calendar">
-          <button>Calendar</button>
+          <button>!Calendar!</button>
         </Link>
       </div>
       <div className="eventList">
