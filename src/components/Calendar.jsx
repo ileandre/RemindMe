@@ -2,6 +2,7 @@ import Days from "../components/Days";
 import NotesList from "../components/NotesList";
 import NotesForm from "../components/NotesForm";
 import { Link, useHistory } from "react-router-dom";
+import Footer from "./Footer";
 
 function Calendar(props) {
   const { month, numberOfDays, year, startDay } = props;
@@ -46,6 +47,7 @@ function Calendar(props) {
 
   return (
     <div className="calendarPage">
+      <div className="mainInfo">
       <nav className="calendarNav">
         <div>
           <Link to="/">
@@ -92,6 +94,8 @@ function Calendar(props) {
           />
         </div>
       </div>
+    </div>
+      <Footer/>
     </div>
   );
 }

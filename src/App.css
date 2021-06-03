@@ -79,6 +79,7 @@ select {
 .calendarPage {
   background-color: rgb(214, 237, 240);
   padding-bottom: 5px;
+  height: 100vh;
 }
 
 .calendarYear {
@@ -164,6 +165,7 @@ select {
   margin: black solid 2px;
   background-color: rgb(26, 87, 136);
   border-radius: 8px;
+  padding: 1% 0px;
 }
 
 .events {
@@ -184,6 +186,7 @@ select {
   align-content: center;
   margin-top: 10px;
   margin-bottom: 10px;
+  /* padding: 5% auto; */
 }
 
 .eventsForm {
@@ -197,7 +200,7 @@ select {
 }
 
 .dayDateTitle {
-  color: rgb(163, 225, 233);
+  color: rgb(76, 189, 204);
   font-family: "Permanent Marker", cursive;
   font-size: 25px;
 }
@@ -221,6 +224,8 @@ select {
 
 .eventPage {
   justify-content: center;
+  height: 100vh;
+  background-color: rgb(214, 237, 240);
 }
 
 .events {
@@ -236,7 +241,11 @@ select {
 .homepage {
   background-color: rgb(214, 237, 240);
   height: 100vh;
-  /* padding-top: 10%; */
+}
+
+.homepage,
+.calendarPage,
+.eventPage {
   display: flex;
   flex-direction: column;
   justify-content: space-between;

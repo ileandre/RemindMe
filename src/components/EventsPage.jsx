@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Events from "./Events";
 import EventsForm from "./EventsForm";
+import Footer from "./Footer";
 
 function EventsPage(props) {
   const params = useParams();
@@ -67,36 +68,40 @@ function EventsPage(props) {
 
   return (
     <div className="eventPage">
-      <div className="eventNav">
-        <Link to="/calendar">
-          <button>Calendar</button>
-        </Link>
-      </div>
-      <div className="eventList">
-        <p className="dayDateTitle">
-          {month} {day}, {year}
-        </p>
-        <h2>Events</h2>
-        {orderedArray.map((event, index) => {                     {/* maps all the event objects fomr the orderedArray rray and renders the event component */}
-          return (
-            <Events
-              key={index}
-              event={event}
+      <div className="mainInfo">
+        <div className="eventNav">
+          <Link to="/calendar">
+            <button>Calendar</button>
+          </Link>
+        </div>
+        <div className="eventList">
+          <p className="dayDateTitle">
+            {month} {day}, {year}
+          </p>
+          <h2>Events</h2>
+          {orderedArray.map((event, index) => {
+            {/* maps all the event objects fomr the orderedArray rray and renders the event component */ }
+            return (
+              <Events
+                key={index}
+                event={event}
+                setEventToggleFetch={props.setEventToggleFetch}
+              />
+            );
+          })}
+
+          <div className="eventsForm">                                 {/*renders the form*/}
+            <h3>Form</h3>
+            <EventsForm
+              year={year}
+              month={month}
+              day={day}
               setEventToggleFetch={props.setEventToggleFetch}
             />
-          );
-        })}
-
-        <div className="eventsForm">                                 {/*renders the form*/}
-          <h3>Form</h3>
-          <EventsForm
-            year={year}
-            month={month}
-            day={day}
-            setEventToggleFetch={props.setEventToggleFetch}
-          />
+          </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
