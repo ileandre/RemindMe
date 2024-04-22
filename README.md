@@ -1,5 +1,5 @@
 # RemindMe
-**Deployed Site:** https://gracious-hermann-c7834b.netlify.app/
+**Deployed Site:** N/A
 # Description: 
 This is a monthly calendar app where users input the month, number of days in the current month (similar to a whiteboard calendar), the month start day and the year. In the app, users can create, edit and delete events, as well as write general notes.
 
